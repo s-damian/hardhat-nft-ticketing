@@ -2,28 +2,35 @@ import { assert, expect } from "chai";
 import { ethers } from "hardhat";
 
 describe("EventManager", function () {
-    it("Should create and retrieve an event", async function () {
+    const EVENT_DETAILS = {
+        title: "Event A",
+        description: "Description of Event A",
+        date: BigInt(1629504000), // August 21, 2021 12:00:00 AM
+        location: "Paris",
+        ticketPrice: ethers.parseEther("0.1"),
+    };
+
+    it("Create an event", async function () {
         // Obtenir le signataire par défaut (utilisé pour le déploiement et les transactions).
         // PS : Dans Hardhat, le premier signataire (index 0) est généralement celui qui déploie les contrats et effectue les transactions par défaut.
-        const signer = await ethers.provider.getSigner(0);
+        const organizer = await ethers.provider.getSigner(0);
 
         // Déployer le contrat EventManager.
         const EventManager = await ethers.getContractFactory("EventManager");
         const eventManager = await EventManager.deploy();
         await eventManager.waitForDeployment();
 
-        // Détails de l'événement.
-        const title = "Event A";
-        const description = "Description of Event A";
-        const date = BigInt(1629504000); // August 21, 2021 12:00:00 AM
-        const location = "Paris";
-        const ticketPrice = ethers.parseEther("0.1");
-
         // Capturer le solde de l'organisateur avant la création de l'événement.
-        const signerBalanceBefore = await ethers.provider.getBalance(signer.address);
+        const organizerBalanceBefore = await ethers.provider.getBalance(organizer.address);
 
         // Créer un événement.
-        const createEventTx = await eventManager.createEvent(title, description, date, location, ticketPrice);
+        const createEventTx = await eventManager.createEvent(
+            EVENT_DETAILS.title,
+            EVENT_DETAILS.description,
+            EVENT_DETAILS.date,
+            EVENT_DETAILS.location,
+            EVENT_DETAILS.ticketPrice,
+        );
         console.log("createEvent - tx signature", createEventTx.hash); // Afficher le hash de la transaction.
 
         // Récupérer l'événement par ID.
@@ -35,21 +42,31 @@ describe("EventManager", function () {
         const [retrievedTitle, retrievedDescription, retrievedDate, retrievedLocation, retrievedOrganizer, retrievedTicketPrice] = eventData;
 
         // Vérifier les détails de l'événement.
-        assert.equal(retrievedTitle, title);
-        assert.equal(retrievedDescription, description);
-        assert.equal(retrievedDate.toString(), date.toString());
-        assert.equal(retrievedLocation, location);
-        assert.equal(retrievedOrganizer, signer.address);
-        assert.equal(retrievedTicketPrice.toString(), ticketPrice.toString());
+        assert.equal(retrievedTitle, EVENT_DETAILS.title);
+        assert.equal(retrievedDescription, EVENT_DETAILS.description);
+        assert.equal(retrievedDate.toString(), EVENT_DETAILS.date.toString());
+        assert.equal(retrievedLocation, EVENT_DETAILS.location);
+        assert.equal(retrievedOrganizer, organizer.address);
+        assert.equal(retrievedTicketPrice.toString(), EVENT_DETAILS.ticketPrice.toString());
 
         // Vérifier que le compteur d'événements a été incrémenté
         assert.equal(await eventManager.eventCount(), BigInt(1));
 
         // Vérifier l'émission de l'événement EventCreated
-        await expect(createEventTx).to.emit(eventManager, "EventCreated").withArgs(1, title, description, date, location, signer.address, ticketPrice);
+        await expect(createEventTx)
+            .to.emit(eventManager, "EventCreated")
+            .withArgs(
+                1,
+                EVENT_DETAILS.title,
+                EVENT_DETAILS.description,
+                EVENT_DETAILS.date,
+                EVENT_DETAILS.location,
+                organizer.address,
+                EVENT_DETAILS.ticketPrice,
+            );
 
         // Vérifier que le solde de l'organisateur a diminué (frais de gas).
-        const signerBalanceAfter = await ethers.provider.getBalance(signer.address);
-        expect(signerBalanceAfter).to.be.lt(signerBalanceBefore);
+        const organizerBalanceAfter = await ethers.provider.getBalance(organizer.address);
+        expect(organizerBalanceAfter).to.be.lt(organizerBalanceBefore);
     });
 });
