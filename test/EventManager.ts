@@ -45,6 +45,9 @@ describe("EventManager", function () {
         // Vérifier que le compteur d'événements a été incrémenté
         assert.equal(await eventManager.eventCount(), BigInt(1));
 
+        // Vérifier l'émission de l'événement EventCreated
+        await expect(createEventTx).to.emit(eventManager, "EventCreated").withArgs(1, title, description, date, location, signer.address, ticketPrice);
+
         // Vérifier que le solde de l'organisateur a diminué (frais de gas).
         const signerBalanceAfter = await ethers.provider.getBalance(signer.address);
         expect(signerBalanceAfter).to.be.lt(signerBalanceBefore);
