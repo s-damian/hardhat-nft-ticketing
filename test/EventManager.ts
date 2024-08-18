@@ -1,7 +1,13 @@
 import { assert, expect } from "chai";
 import { ethers } from "hardhat";
+import { EventManager } from "../typechain-types";
+import { SignerWithAddress } from "@nomicfoundation/hardhat-ethers/signers";
 
 describe("EventManager", function () {
+    let eventManager: EventManager;
+    let organizer: SignerWithAddress;
+    //let otherAccount: SignerWithAddress;
+
     const EVENT_DETAILS = {
         title: "Event A",
         description: "Description of Event A",
@@ -10,16 +16,19 @@ describe("EventManager", function () {
         ticketPrice: ethers.parseEther("0.1"),
     };
 
-    it("Create an event", async function () {
+    beforeEach(async function () {
         // Obtenir le signataire par défaut (utilisé pour le déploiement et les transactions).
         // PS : Dans Hardhat, le premier signataire (index 0) est généralement celui qui déploie les contrats et effectue les transactions par défaut.
-        const organizer = await ethers.provider.getSigner(0);
+        organizer = await ethers.provider.getSigner(0);
+        //[organizer, otherAccount] = await ethers.getSigners();
 
-        // Déployer le contrat EventManager.
-        const EventManager = await ethers.getContractFactory("EventManager");
-        const eventManager = await EventManager.deploy();
+        const EventManagerFactory = await ethers.getContractFactory("EventManager");
+        eventManager = await EventManagerFactory.deploy();
         await eventManager.waitForDeployment();
+    });
 
+    // SUCCESS create_event
+    it("Create an event", async function () {
         // Capturer le solde de l'organisateur avant la création de l'événement.
         const organizerBalanceBefore = await ethers.provider.getBalance(organizer.address);
 
@@ -37,6 +46,9 @@ describe("EventManager", function () {
         //const event = await eventManager.getEvent(1);
         // Récupérer l'événement par ID en utilisant l'ABI pour décoder manuellement.
         const eventData = await eventManager.getFunction("getEvent").staticCall(1);
+
+        console.log("eventData 1 :");
+        console.log(eventData);
 
         // Décoder manuellement les données.
         const [retrievedTitle, retrievedDescription, retrievedDate, retrievedLocation, retrievedOrganizer, retrievedTicketPrice] = eventData;
@@ -68,5 +80,17 @@ describe("EventManager", function () {
         // Vérifier que le solde de l'organisateur a diminué (frais de gas).
         const organizerBalanceAfter = await ethers.provider.getBalance(organizer.address);
         expect(organizerBalanceAfter).to.be.lt(organizerBalanceBefore);
+    });
+
+    // ERROR create_event
+    it("Should fail to retrieve a non-existent event", async function () {
+        const eventData = await eventManager.getFunction("getEvent").staticCall(999);
+
+        expect(eventData.title).to.equal("");
+        expect(eventData.description).to.equal("");
+        expect(eventData.date).to.equal(0n);
+        expect(eventData.location).to.equal("");
+        expect(eventData.organizer).to.equal(ethers.ZeroAddress);
+        expect(eventData.ticketPrice).to.equal(0n);
     });
 });
