@@ -47,19 +47,13 @@ describe("EventManager", function () {
         // Récupérer l'événement par ID en utilisant l'ABI pour décoder manuellement.
         const eventData = await eventManager.getFunction("getEvent").staticCall(1);
 
-        console.log("eventData 1 :");
-        console.log(eventData);
-
-        // Décoder manuellement les données.
-        const [retrievedTitle, retrievedDescription, retrievedDate, retrievedLocation, retrievedOrganizer, retrievedTicketPrice] = eventData;
-
         // Vérifier les détails de l'événement.
-        assert.equal(retrievedTitle, EVENT_DETAILS.title);
-        assert.equal(retrievedDescription, EVENT_DETAILS.description);
-        assert.equal(retrievedDate.toString(), EVENT_DETAILS.date.toString());
-        assert.equal(retrievedLocation, EVENT_DETAILS.location);
-        assert.equal(retrievedOrganizer, organizer.address);
-        assert.equal(retrievedTicketPrice.toString(), EVENT_DETAILS.ticketPrice.toString());
+        assert.equal(eventData.title, EVENT_DETAILS.title);
+        assert.equal(eventData.description, EVENT_DETAILS.description);
+        assert.equal(eventData.date.toString(), EVENT_DETAILS.date.toString());
+        assert.equal(eventData.location, EVENT_DETAILS.location);
+        assert.equal(eventData.organizer, organizer.address);
+        assert.equal(eventData.ticketPrice.toString(), EVENT_DETAILS.ticketPrice.toString());
 
         // Vérifier que le compteur d'événements a été incrémenté
         assert.equal(await eventManager.eventCount(), BigInt(1));
@@ -86,11 +80,11 @@ describe("EventManager", function () {
     it("Should fail to retrieve a non-existent event", async function () {
         const eventData = await eventManager.getFunction("getEvent").staticCall(999);
 
-        expect(eventData.title).to.equal("");
-        expect(eventData.description).to.equal("");
-        expect(eventData.date).to.equal(0n);
-        expect(eventData.location).to.equal("");
-        expect(eventData.organizer).to.equal(ethers.ZeroAddress);
-        expect(eventData.ticketPrice).to.equal(0n);
+        assert.equal(eventData.title, "");
+        assert.equal(eventData.description, "");
+        assert.equal(eventData.date, 0n);
+        assert.equal(eventData.location, "");
+        assert.equal(eventData.organizer, ethers.ZeroAddress);
+        assert.equal(eventData.ticketPrice, 0n);
     });
 });
