@@ -10,8 +10,7 @@ describe("EventManager", function () {
 
         const title = "Event A";
         const description = "Description of Event A.";
-        //const date = 1629504000; // August 21, 2021 12:00:00 AM
-        const date = BigInt(1629504000);
+        const date = BigInt(1629504000); // August 21, 2021 12:00:00 AM
         const location = "Paris, France";
         const ticketPrice = ethers.parseEther("0.1");
 
@@ -24,9 +23,9 @@ describe("EventManager", function () {
 
         expect(event.title).to.equal(title);
         expect(event.description).to.equal(description);
-        expect(event.date).to.equal(date);
+        expect(event.date.toString()).to.equal(date.toString());
         expect(event.location).to.equal(location);
         expect(event.organizer).to.equal(await ethers.provider.getSigner(0).getAddress());
-        expect(event.ticketPrice).to.equal(ticketPrice);
+        expect(event.ticketPrice.toString()).to.equal(ticketPrice.toString());
     });
 });
