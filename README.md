@@ -14,6 +14,8 @@
 
 > NFT Marketplace Event Ticketing on the Ethereum blockchain
 
+![License](https://img.shields.io/badge/License-MIT-blue)
+
 This **NFT Ethereum Project** is developed by [Stephen Damian](https://github.com/s-damian)
 
 
