@@ -12,21 +12,21 @@ describe("EventManager", function () {
         await eventManager.waitForDeployment();
 
         const title = "Event A";
-        const description = "Description of Event A.";
+        const description = "Description of Event A";
         const date = BigInt(1629504000); // August 21, 2021 12:00:00 AM
-        const location = "Paris, France";
+        const location = "Paris";
         const ticketPrice = ethers.parseEther("0.1");
 
-        // Créer un événement
+        // Créer un événement.
         const createEventTx = await eventManager.createEvent(title, description, date, location, ticketPrice);
-        await createEventTx.wait(); // Attendre la confirmation de la transaction
+        console.log("createEvent - tx signature", createEventTx.hash); // Afficher le hash de la transaction.
 
-        // Récupérer l'événement par ID
+        // Récupérer l'événement par ID.
         //const event = await eventManager.getEvent(1);
-        // Récupérer l'événement par ID en utilisant l'ABI pour décoder manuellement
+        // Récupérer l'événement par ID en utilisant l'ABI pour décoder manuellement.
         const eventData = await eventManager.getFunction("getEvent").staticCall(1);
 
-        // Décoder manuellement les données
+        // Décoder manuellement les données.
         const [retrievedTitle, retrievedDescription, retrievedDate, retrievedLocation, retrievedOrganizer, retrievedTicketPrice] = eventData;
 
         expect(retrievedTitle).to.equal(title);
