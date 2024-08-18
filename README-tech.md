@@ -22,7 +22,15 @@ npx hardhat init
 ```
 
 
+
 ### Run Hardhat Network (local testnet)
 ```bash
 npx hardhat node
+```
+
+
+
+### Run Hardhat Network (local testnet)
+```bash
+npx hardhat test
 ```

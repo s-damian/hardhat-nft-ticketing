@@ -1,13 +1,24 @@
-# Sample Hardhat Project
+# NFT Ticketing in Ethereum / Hardhat
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+<a href="https://github.com/s-damian/hardhat-nft-ticketing">
+<img src="https://raw.githubusercontent.com/s-damian/medias/main/technos-logos/solidity.webp" alt="Solidity Logo" height="100px">
+</a>
+<a href="https://github.com/s-damian/hardhat-nft-ticketing">
+<img src="https://raw.githubusercontent.com/s-damian/medias/main/technos-logos/ethereum.webp" alt="Ethereum Logo" height="100px">
+</a>
+<a href="https://github.com/s-damian/hardhat-nft-ticketing">
+<img src="https://raw.githubusercontent.com/s-damian/medias/main/technos-logos/hardhat.webp" alt="Hardhat Logo" height="100px">
+</a>
 
-Try running some of the following tasks:
+> #Solidity #Ethereum #Hardhat #NFT # Web3
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.ts
-```
+> NFT Marketplace Event Ticketingon the Ethereum Blockchain
+
+This **NFT Ethereum Project** is developed by [Stephen Damian](https://github.com/s-damian)
+
+
+## Project Overview
+
+NFT Marketplace Event Ticketing - A decentralized application for managing and verifying event tickets as NFTs on the Ethereum blockchain.
+
+**Status**: Under development 🚧
