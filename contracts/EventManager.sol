@@ -2,6 +2,8 @@
 pragma solidity ^0.8.24;
 
 contract EventManager {
+    uint256 public eventCount;
+
     // Structure de données pour un événement
     struct Event {
         string title;
