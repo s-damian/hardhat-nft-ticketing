@@ -12,7 +12,7 @@
 
 > #Solidity #Ethereum #Hardhat #NFT # Web3
 
-> NFT Marketplace Event Ticketingon the Ethereum Blockchain
+> NFT Marketplace Event Ticketing on the Ethereum blockchain
 
 This **NFT Ethereum Project** is developed by [Stephen Damian](https://github.com/s-damian)
 
