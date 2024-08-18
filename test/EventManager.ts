@@ -5,7 +5,6 @@ describe("EventManager", function () {
     it("Should create and retrieve an event", async function () {
         const EventManager = await ethers.getContractFactory("EventManager");
         const eventManager = await EventManager.deploy();
-        //await eventManager.deployed();
         await eventManager.waitForDeployment();
 
         const title = "Event A";
@@ -19,13 +18,22 @@ describe("EventManager", function () {
         await createEventTx.wait(); // Attendre la confirmation de la transaction
 
         // Récupérer l'événement par ID
-        const event = await eventManager.getEvent(1);
+        //const event = await eventManager.getEvent(1);
+        // Récupérer l'événement par ID en utilisant l'ABI pour décoder manuellement
+        const eventData = await eventManager.getFunction("getEvent").staticCall(1);
 
-        expect(event.title).to.equal(title);
-        expect(event.description).to.equal(description);
-        expect(event.date.toString()).to.equal(date.toString());
-        expect(event.location).to.equal(location);
-        expect(event.organizer).to.equal(await ethers.provider.getSigner(0).getAddress());
-        expect(event.ticketPrice.toString()).to.equal(ticketPrice.toString());
+        // Décoder manuellement les données
+        const [retrievedTitle, retrievedDescription, retrievedDate, retrievedLocation, retrievedOrganizer, retrievedTicketPrice] = eventData;
+
+        expect(retrievedTitle).to.equal(title);
+        expect(retrievedDescription).to.equal(description);
+        expect(retrievedDate.toString()).to.equal(date.toString());
+        expect(retrievedLocation).to.equal(location);
+
+        // Accéder directement à l'adresse du signataire
+        const signer = await ethers.provider.getSigner(0);
+        expect(retrievedOrganizer).to.equal(signer.address);
+
+        expect(retrievedTicketPrice.toString()).to.equal(ticketPrice.toString());
     });
 });
