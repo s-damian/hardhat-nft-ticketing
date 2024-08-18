@@ -14,7 +14,6 @@ contract EventManager {
 
     // Mapping pour stocker les événements par ID
     mapping(uint256 => Event) public events;
-    uint256 public eventCount;
 
     // Événement émis lors de la création d'un événement
     event EventCreated(uint256 eventId, string title, string description, int64 date, string location, address indexed organizer, uint256 ticketPrice);
