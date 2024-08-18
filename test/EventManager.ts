@@ -3,6 +3,10 @@ import { ethers } from "hardhat";
 
 describe("EventManager", function () {
     it("Should create and retrieve an event", async function () {
+        // Obtenir le signataire par défaut (utilisé pour le déploiement et les transactions).
+        // PS : Dans Hardhat, le premier signataire (index 0) est généralement celui qui déploie les contrats et effectue les transactions par défaut.
+        const signer = await ethers.provider.getSigner(0);
+
         const EventManager = await ethers.getContractFactory("EventManager");
         const eventManager = await EventManager.deploy();
         await eventManager.waitForDeployment();
@@ -29,11 +33,7 @@ describe("EventManager", function () {
         expect(retrievedDescription).to.equal(description);
         expect(retrievedDate.toString()).to.equal(date.toString());
         expect(retrievedLocation).to.equal(location);
-
-        // Accéder directement à l'adresse du signataire
-        const signer = await ethers.provider.getSigner(0);
         expect(retrievedOrganizer).to.equal(signer.address);
-
         expect(retrievedTicketPrice.toString()).to.equal(ticketPrice.toString());
     });
 });
