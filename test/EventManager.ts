@@ -13,7 +13,7 @@ describe("EventManager", function () {
         //const date = 1629504000; // August 21, 2021 12:00:00 AM
         const date = BigInt(1629504000);
         const location = "Paris, France";
-        const ticketPrice = ethers.utils.parseEther("0.1");
+        const ticketPrice = ethers.parseEther("0.1");
 
         // Créer un événement
         const createEventTx = await eventManager.createEvent(title, description, date, location, ticketPrice);
