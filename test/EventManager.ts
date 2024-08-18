@@ -5,8 +5,8 @@ import { SignerWithAddress } from "@nomicfoundation/hardhat-ethers/signers";
 
 describe("EventManager", function () {
     let eventManager: EventManager;
-    let organizer: SignerWithAddress;
-    //let otherAccount: SignerWithAddress;
+    let signer: SignerWithAddress;
+    let otherSigner: SignerWithAddress;
 
     const EVENT_DETAILS = {
         title: "Event A",
@@ -18,9 +18,11 @@ describe("EventManager", function () {
 
     beforeEach(async function () {
         // Obtenir le signataire par défaut (utilisé pour le déploiement et les transactions).
-        // PS : Dans Hardhat, le premier signataire (index 0) est généralement celui qui déploie les contrats et effectue les transactions par défaut.
-        organizer = await ethers.provider.getSigner(0);
-        //[organizer, otherAccount] = await ethers.getSigners();
+        // Dans Hardhat, le premier signataire (index 0) est généralement celui qui déploie les contrats et effectue les transactions par défaut.
+        //signer = await ethers.provider.getSigner(0);
+        // Hardhat, par défaut, génère 20 comptes Ethereum, chacun avec une quantité généreuse d'ETH.
+        // Cela nous permet de simuler différents acteurs dans nos tests.
+        [signer, otherSigner] = await ethers.getSigners();
 
         const EventManagerFactory = await ethers.getContractFactory("EventManager");
         eventManager = await EventManagerFactory.deploy();
@@ -29,6 +31,8 @@ describe("EventManager", function () {
 
     // SUCCESS create_event
     it("Create an event", async function () {
+        const organizer = signer;
+
         // Capturer le solde de l'organisateur avant la création de l'événement.
         const organizerBalanceBefore = await ethers.provider.getBalance(organizer.address);
 
@@ -74,6 +78,21 @@ describe("EventManager", function () {
         // Vérifier que le solde de l'organisateur a diminué (frais de gas).
         const organizerBalanceAfter = await ethers.provider.getBalance(organizer.address);
         expect(organizerBalanceAfter).to.be.lt(organizerBalanceBefore);
+    });
+
+    // SUCCESS create_event - Create 3 events.
+    it("Should create multiple events and increment event count correctly", async function () {
+        for (let i = 1; i <= 3; i++) {
+            await eventManager.createEvent(`Event ${i}`, `Description ${i}`, EVENT_DETAILS.date, EVENT_DETAILS.location, EVENT_DETAILS.ticketPrice);
+            assert.equal(await eventManager.eventCount(), BigInt(i));
+
+            const eventData = await eventManager.getFunction("getEvent").staticCall(i);
+            assert.equal(eventData.title, `Event ${i}`);
+            assert.equal(eventData.description, `Description ${i}`);
+        }
+
+        // Vérifier que le compteur d'événements a été incrémenté
+        assert.equal(await eventManager.eventCount(), BigInt(3));
     });
 
     // ERROR create_event
