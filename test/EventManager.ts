@@ -18,7 +18,7 @@ describe("EventManager", function () {
 
     beforeEach(async function () {
         // Obtenir le signataire par défaut (utilisé pour le déploiement et les transactions).
-        // Dans Hardhat, le premier signataire (index 0) est généralement celui qui déploie les contrats et effectue les transactions par défaut.
+        // Dans Hardhat, le 1er signataire (index 0) est généralement celui qui déploie les contrats et effectue les transactions par défaut.
         //signer = await ethers.provider.getSigner(0);
         // Hardhat, par défaut, génère 20 comptes Ethereum, chacun avec une quantité généreuse d'ETH.
         // Cela nous permet de simuler différents acteurs dans nos tests.

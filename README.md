@@ -24,3 +24,16 @@ This **NFT Ethereum Project** is developed by [Stephen Damian](https://github.co
 NFT Marketplace Event Ticketing - A decentralized application for managing and verifying event tickets as NFTs on the Ethereum blockchain.
 
 **Status**: Under development 🚧
+
+
+## Prerequisites
+
+- **Node.js** ```>= 18``` and **npm** (for the Front-End) - *You can install Node.js and npm here: [Node.js](https://nodejs.org/en/download/package-manager).*
+
+
+## Technologies
+
+- **Back-End**: Solidity, Ethereum, Hardhat
+- **Front-End**: Next.js ```14```, React ```18```, TypeScript, Tailwind CSS
+- **Wallet Integration**: MetaMask
+- **Blockchain Interaction**: Ethers.js

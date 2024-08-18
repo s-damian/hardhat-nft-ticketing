@@ -1,1 +1,4 @@
 node_modules
+
+/front/.next
+/front/node_modules
