@@ -39,3 +39,38 @@ NFT Marketplace Event Ticketing - A decentralized application for managing and v
 - **Front-End**: Next.js ```14```, React ```18```, TypeScript, Tailwind CSS
 - **Wallet Integration**: MetaMask
 - **Blockchain Interaction**: Ethers.js
+
+
+## Code Structure
+
+```bash
+.
+├── contracts
+│   └── // Smart contracts.
+├── front
+│   ├── app
+│   │   └── // Pages (Nextjs App Router).
+│   ├── src
+│   │   ├── components
+│   │   │   └── // React components.
+│   │   ├── handlers
+│   │   │   └── // React handlers.
+│   │   └── utils
+│   │       └── // React utils.
+│   ├── .env.local
+│   ├── package.json
+│   └── tailwind.config.ts
+├── ignition
+│   └── // Ignitions.
+├── scripts
+│   └── // Scripts.
+├── tests
+│   └── // Tests.
+├── package.json
+└── README.md
+```
+
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
