@@ -13,17 +13,17 @@ const CreateEvent: React.FC = () => {
     const [date, setDate] = useState<string>("");
     const [time, setTime] = useState<string>("");
     const [location, setLocation] = useState<string>("");
-    const [ticketPrice, setTicketPrice] = useState<string>("");
+    const [ticketPrice, setTicketPrice] = useState<string>(""); // Valeur en Wei. PS: 1 ETH = 10^18 Wei. 1 ETH = 1,000,000,000,000,000,000 Wei (18 zéros)
 
-    const [ticketPriceInETH, setTicketPriceInETH] = useState<string>("");
+    const [ticketPriceInETH, setTicketPriceInETH] = useState<string>(""); // Pour afficher la valeur en ETH.
 
     const { address } = useAccount();
 
     useEffect(() => {
         if (ticketPrice) {
             try {
-                const priceInWei = parseEther(ticketPrice);
-                setTicketPriceInETH(formatEther(priceInWei));
+                // Convertir de Wei à ETH pour pour l'UX.
+                setTicketPriceInETH(formatEther(BigInt(ticketPrice)));
             } catch (error) {
                 setTicketPriceInETH("");
             }

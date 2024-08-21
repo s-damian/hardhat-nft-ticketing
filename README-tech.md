@@ -39,3 +39,8 @@ npx hardhat node
 ```bash
 npx hardhat run scripts/deploy.ts --network localhost
 ```
+
+### Déployer le contrat sur le réseau local
+```bash
+npx hardhat run scripts/sendETH.ts --network localhost
+```
