@@ -1,5 +1,7 @@
 import { ethers } from "hardhat";
 
+// # Envoyer des ETH :
+// npx hardhat run scripts/sendETH.ts --network localhost
 async function main() {
     const [deployer] = await ethers.getSigners();
 
