@@ -30,7 +30,7 @@ NFT Marketplace Event Ticketing - A decentralized application for managing and v
 
 ## Prerequisites
 
-- **Node.js** ```>= 18``` and **npm** (for the Front-End) - *You can install Node.js and npm here: [Node.js](https://nodejs.org/en/download/package-manager).*
+- **Node.js** ```>= 18``` and **npm** (for the Front-End) | You can install Node.js and npm here: [Node.js](https://nodejs.org/en/download/package-manager).
 
 
 ## Technologies
