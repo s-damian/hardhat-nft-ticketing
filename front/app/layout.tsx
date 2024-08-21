@@ -1,4 +1,5 @@
 import "./globals.css";
+import AppWalletProvider from "../src/components/AppWalletProvider";
 
 export default function RootLayout({
     children,
@@ -7,9 +8,11 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="fr">
-            <title>Hardhat NFT Ticketing</title>
-            <meta name="description" content="Plateforme de billetterie NFT basée sur Ethereum" />
-            <body>{children}</body>
+            <body>
+                <title>Hardhat NFT Ticketing</title>
+                <meta name="description" content="Plateforme de billetterie NFT basée sur Ethereum" />
+                <AppWalletProvider>{children}</AppWalletProvider>
+            </body>
         </html>
     );
 }

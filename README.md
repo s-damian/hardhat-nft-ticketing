@@ -12,11 +12,13 @@
 
 > #Solidity #Ethereum #Hardhat #NFT # Web3
 
-> NFT Marketplace Event Ticketing on the Ethereum blockchain
+> NFT Marketplace Event Ticketing on the Ethereum Blockchain
 
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
 This **NFT Ethereum Project** is developed by [Stephen Damian](https://github.com/s-damian)
+
+PS: I developed the same project with [Solana / Anchor](https://github.com/s-damian/anchor-nft-ticketing)
 
 
 ## Project Overview

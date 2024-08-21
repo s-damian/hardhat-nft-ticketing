@@ -3,9 +3,14 @@ import { ethers } from "hardhat";
 async function main() {
     const EventManagerFactory = await ethers.getContractFactory("EventManager");
     const eventManager = await EventManagerFactory.deploy();
+
+    // Attendre que le contrat soit déployé
     await eventManager.waitForDeployment();
 
-    console.log("EventManager deployed to:", eventManager.address);
+    // Obtenir l'adresse du contrat déployé
+    const eventManagerAddress = await eventManager.getAddress();
+
+    console.log("EventManager deployed to:", eventManagerAddress);
 }
 
 main().catch((error) => {

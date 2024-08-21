@@ -25,12 +25,17 @@ npx hardhat init
 
 ### Run Hardhat Network (local testnet)
 ```bash
-npx hardhat node
+npx hardhat test
 ```
 
 
 
-### Run Hardhat Network (local testnet)
+### Démarrer un réseau local avec Hardhat
 ```bash
-npx hardhat test
+npx hardhat node
+```
+
+### Déployer le contrat sur le réseau local
+```bash
+npx hardhat run scripts/deploy.ts --network localhost
 ```

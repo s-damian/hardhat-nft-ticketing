@@ -11,7 +11,7 @@ contract EventManager {
         int64 date;
         string location;
         address organizer;
-        uint256 ticketPrice;
+        uint256 ticketPrice; // Valeur en Wei. 1 ETH = 10^18 Wei.
     }
 
     // Mapping pour stocker les événements par ID

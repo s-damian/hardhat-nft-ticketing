@@ -1,9 +1,13 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
+import { ConnectKitButton } from "connectkit";
+import { useAccount, useBalance } from "wagmi";
+import { formatEther } from "viem";
 
 const NavBar: React.FC = () => {
+    const { address, isConnected } = useAccount();
+    const { data: balance } = useBalance({ address });
+
     return (
         <nav className="bg-blue-700 p-4">
             <div className="container mx-auto flex justify-between items-center">
@@ -28,7 +32,16 @@ const NavBar: React.FC = () => {
                             Vérifier un NFT
                         </Link>
                     </li>
-                    <li className="ml-auto">...</li>
+                    <li className="ml-auto text-white pr-2">
+                        {isConnected && balance ? (
+                            <span>
+                                {parseFloat(formatEther(balance.value)).toFixed(4)} {balance.symbol}
+                            </span>
+                        ) : null}
+                    </li>
+                    <li>
+                        <ConnectKitButton />
+                    </li>
                 </ul>
             </div>
         </nav>
