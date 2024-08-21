@@ -1,4 +1,4 @@
-# NFT Ticketing in Ethereum / Hardhat
+# NFT Ticketing in Ethereum / Hardhat / Solidity
 
 <a href="https://github.com/s-damian/hardhat-nft-ticketing">
 <img src="https://raw.githubusercontent.com/s-damian/medias/main/technos-logos/solidity.webp" alt="Solidity Logo" height="100px">
