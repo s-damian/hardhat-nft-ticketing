@@ -1,0 +1,54 @@
+name: Hardhat Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build_and_test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        # Node.js versions
+        node-version: [16, 18, 20]
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Setup Hardhat Environment
+        run: |
+          npm install -g hardhat
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Compile Hardhat Contracts
+        run: npx hardhat compile
+
+      - name: Debug Project Structure
+        run: |
+          echo "Current directory: $(pwd)"
+          echo "PATH: $PATH"
+          echo "Directory structure:"
+          tree -L 3 || ls -R
+
+      - name: Debug Environment
+        run: |
+          echo "Solidity version: $(npx hardhat run scripts/get-solidity-version.js)"
+          echo "Hardhat version: $(npx hardhat --version)"
+          echo "Node.js version: $(node --version)"
+
+      - name: Run Hardhat Tests
+        run: npx hardhat test
