@@ -14,8 +14,8 @@
 
 > NFT Marketplace Event Ticketing on the Ethereum Blockchain
 
-![Build](https://github.com/s-damian/hardhat-nft-ticketing/actions/workflows/tests.yml/badge.svg)
-![Static Analysis](https://github.com/s-damian/hardhat-nft-ticketing/actions/workflows/static-analysis.yml/badge.svg)
+[![Build](https://github.com/s-damian/hardhat-nft-ticketing/actions/workflows/tests.yml/badge.svg)](https://github.com/s-damian/hardhat-nft-ticketing/actions/workflows/tests.yml)
+[![Static Analysis](https://github.com/s-damian/hardhat-nft-ticketing/actions/workflows/static-analysis.yml/badge.svg)](https://github.com/s-damian/hardhat-nft-ticketing/actions/workflows/static-analysis.yml)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
 This **NFT Ethereum Project** is developed by [Stephen Damian](https://github.com/s-damian)
