@@ -4,7 +4,6 @@ import { HardhatRuntimeEnvironment } from "hardhat/types";
 
 async function main() {
     try {
-        // Importez Hardhat runtime de manière dynamique
         const hre: HardhatRuntimeEnvironment = require("hardhat");
 
         await hre.run(TASK_COMPILE);

@@ -1,0 +1,40 @@
+name: Static Analysis
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint:
+    name: Run ESLint and Solhint
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        # Node.js versions
+        node-version: [18, 20]
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install NPM Dependencies
+        run: npm install
+
+      - name: Run Lint
+        run: npm run lint
+
+      - name: Run Lint for SOL
+        run: npm run lint-sol
+
+      - name: Run Solhint
+        run: npx solhint 'contracts/**/*.sol'

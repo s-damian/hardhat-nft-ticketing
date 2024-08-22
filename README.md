@@ -14,6 +14,7 @@
 
 > NFT Marketplace Event Ticketing on the Ethereum Blockchain
 
+![Build](https://github.com/s-damian/hardhat-nft-ticketing/actions/workflows/tests.yml/badge.svg)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
 This **NFT Ethereum Project** is developed by [Stephen Damian](https://github.com/s-damian)

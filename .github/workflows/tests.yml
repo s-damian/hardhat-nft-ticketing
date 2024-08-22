@@ -34,7 +34,7 @@ jobs:
       - name: Install Hardhat
         run: npm install --save-dev hardhat
 
-      - name: Install Dependencies
+      - name: Install NPM Dependencies
         run: npm install
 
 
@@ -50,9 +50,9 @@ jobs:
 
       - name: Debug Environment
         run: |
-          echo "Solidity version: $(npx hardhat run scripts/getSolidityVersion.ts)"
           echo "Hardhat version: $(npx hardhat --version)"
           echo "Node.js version: $(node --version)"
+          echo "Solidity version: $(npx hardhat run scripts/getSolidityVersion.ts)"
 
       - name: Run Hardhat Tests
         run: npx hardhat test
