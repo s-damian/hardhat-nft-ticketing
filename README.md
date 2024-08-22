@@ -49,23 +49,24 @@ NFT Marketplace Event Ticketing - A decentralized application for managing and v
 │   └── // Smart contracts.
 ├── front
 │   ├── app
-│   │   └── // Pages (Nextjs App Router).
+│   │   └── [Pages - Nextjs App Router]
 │   ├── src
 │   │   ├── components
-│   │   │   └── // React components.
+│   │   │   └── [React components]
 │   │   ├── handlers
-│   │   │   └── // React handlers.
+│   │   │   └── [React handlers]
 │   │   └── utils
-│   │       └── // React utils.
+│   │       └── [React utils]
 │   ├── .env.local
 │   ├── package.json
 │   └── tailwind.config.ts
 ├── ignition
-│   └── // Ignitions.
+│   └── [Ignitions]
 ├── scripts
-│   └── // Scripts.
+│   └── [Scripts]
 ├── tests
-│   └── // Tests.
+│   └── [Tests]
+├── hardhat.config.ts
 ├── package.json
 └── README.md
 ```
