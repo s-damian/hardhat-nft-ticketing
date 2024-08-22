@@ -35,8 +35,8 @@ NFT Marketplace Event Ticketing - A decentralized application for managing and v
 
 ## Technologies
 
-- **Back-End**: Solidity, Ethereum, Hardhat
-- **Front-End**: Next.js ```14```, React ```18```, TypeScript, Tailwind CSS
+- **Back-End**: Solidity ```0.8.24```, Ethereum, Hardhat ```2.22.8```
+- **Front-End**: Next.js ```14```, React ```18```, TypeScript ```5```, Tailwind CSS
 - **Wallet Integration**: MetaMask
 - **Blockchain Interaction**: Ethers.js
 
