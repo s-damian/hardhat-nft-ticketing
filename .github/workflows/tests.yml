@@ -34,9 +34,6 @@ jobs:
       - name: Install Hardhat
         run: npm install --save-dev hardhat
 
-      - name: Install Hardhat Project
-        run: npx hardhat init
-
       - name: Install Dependencies
         run: npm install
 

@@ -1,21 +1,27 @@
-const { TASK_COMPILE } = require("hardhat/builtin-tasks/task-names");
-const { HardhatPluginError } = require("hardhat/plugins");
+import { TASK_COMPILE } from "hardhat/builtin-tasks/task-names";
+import { HardhatPluginError } from "hardhat/plugins";
+import { HardhatRuntimeEnvironment } from "hardhat/types";
 
 async function main() {
-  try {
-    const [compiler] = await hre.run(TASK_COMPILE);
-    console.log(compiler.version);
-  } catch (error) {
-    if (error instanceof HardhatPluginError) {
-      console.error(error.message);
-    } else {
-      console.error(error);
+    try {
+        // Importez Hardhat runtime de manière dynamique
+        const hre: HardhatRuntimeEnvironment = require("hardhat");
+
+        await hre.run(TASK_COMPILE);
+
+        const solcVersion = hre.config.solidity.compilers[0].version;
+        console.log(solcVersion);
+    } catch (error) {
+        if (error instanceof HardhatPluginError) {
+            console.error(error.message);
+        } else {
+            console.error(error);
+        }
+        process.exit(1);
     }
-    process.exit(1);
-  }
 }
 
 main().catch((error) => {
-  console.error(error);
-  process.exit(1);
+    console.error(error);
+    process.exit(1);
 });
