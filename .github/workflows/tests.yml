@@ -28,9 +28,14 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
 
-      - name: Setup Hardhat Environment
-        run: |
-          npm install -g hardhat
+      - name: Init NPM Project
+        run: npm init -y
+
+      - name: Install Hardhat
+        run: npm install --save-dev hardhat
+
+      - name: Install Hardhat Project
+        run: npx hardhat init
 
       - name: Install Dependencies
         run: npm install
@@ -48,9 +53,14 @@ jobs:
 
       - name: Debug Environment
         run: |
-          echo "Solidity version: $(npx hardhat run scripts/get-solidity-version.js)"
+          echo "Solidity version: $(npx hardhat run scripts/getSolidityVersion.ts)"
           echo "Hardhat version: $(npx hardhat --version)"
           echo "Node.js version: $(node --version)"
 
       - name: Run Hardhat Tests
         run: npx hardhat test
+
+      - name: Run Gas Reporter
+        run: npx hardhat test
+        env:
+          REPORT_GAS: true
