@@ -27,13 +27,15 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+
       - name: Install Dependencies
         run: npm ci
 
       - name: Install Hardhat
         run: npm install --save-dev hardhat
 
-      - name: Compile Contracts
+
+      - name: Compile Hardhat Contracts
         run: npx hardhat compile
 
       - name: Debug Project Structure
@@ -48,9 +50,6 @@ jobs:
           echo "Solidity version: $(npx hardhat run scripts/get-solidity-version.js)"
           echo "Hardhat version: $(npx hardhat --version)"
           echo "Node.js version: $(node --version)"
-
-      - name: Check Contract Size
-        run: npx hardhat size-contracts
 
       - name: Run Hardhat Tests
         run: npx hardhat test

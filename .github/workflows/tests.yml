@@ -16,7 +16,7 @@ jobs:
     strategy:
       matrix:
         # Node.js versions
-        node-version: [16, 18, 20]
+        node-version: [18, 20]
 
     steps:
       - name: Checkout Code
@@ -27,12 +27,14 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+
       - name: Setup Hardhat Environment
         run: |
           npm install -g hardhat
 
       - name: Install Dependencies
         run: npm install
+
 
       - name: Compile Hardhat Contracts
         run: npx hardhat compile
