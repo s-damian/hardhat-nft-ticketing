@@ -39,3 +39,23 @@ npx hardhat node
 ```bash
 npx hardhat run scripts/deploy.ts --network localhost
 ```
+
+
+
+## Custom Scripts
+
+### Get Solidity Version
+```bash
+npx hardhat run scripts/getSolidityVersion.ts --network localhost
+```
+
+### Send Ethers
+```bash
+npx hardhat run scripts/sendETH.ts --network localhost
+```
+
+### Get Transaction Details
+Dans ce fichier de script, il faut remplacer "recipient" par l'adresse MetaMask que vous voulez recharger.
+```bash
+npx hardhat run scripts/getTxDetails.ts --network localhost
+```
