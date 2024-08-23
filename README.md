@@ -32,15 +32,15 @@ NFT Marketplace Event Ticketing - A decentralized application for managing and v
 
 ## Prerequisites
 
-- **Node.js** ```>= 18``` and **npm** (for the Front-End) | *You can install Node.js and npm here: [Node.js](https://nodejs.org/en/download/package-manager).*
+- **Node.js** ```>= 18``` and **npm** (for the Front-End) - *You can install Node.js and npm here: [Node.js](https://nodejs.org/en/download/package-manager).*
 
 
 ## Technologies
 
 - **Back-End**: Solidity ```0.8.24```, Ethereum, Hardhat ```2.22.8```
 - **Front-End**: Next.js ```14```, React ```18```, TypeScript ```5```, Tailwind CSS
-- **Wallet Integration**: MetaMask
 - **Blockchain Interaction**: Ethers.js
+- **Wallet Integration**: MetaMask
 
 
 ## Code Structure
@@ -48,7 +48,7 @@ NFT Marketplace Event Ticketing - A decentralized application for managing and v
 ```bash
 .
 ├── contracts
-│   └── // Smart contracts.
+│   └── [Smart contracts]
 ├── front
 │   ├── app
 │   │   └── [React pages]
