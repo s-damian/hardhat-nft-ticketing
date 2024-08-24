@@ -17,6 +17,10 @@ jobs:
       matrix:
         # Node.js versions
         node-version: [18, 20]
+        # Node.js versions
+        node-version: [18, 20]
+        # Hardhat releases: https://github.com/NomicFoundation/hardhat/releases
+        hardhat-version: [2.22.9] # Keep ONLY ONE version.
 
     steps:
       - name: Checkout Code
@@ -31,7 +35,7 @@ jobs:
         run: npm init -y
 
       - name: Install Hardhat
-        run: npm install --save-dev hardhat
+        run: npm install --save-dev hardhat@${{ matrix.hardhat-version }}
 
       - name: Install NPM Dependencies
         run: npm install
