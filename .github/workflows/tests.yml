@@ -18,7 +18,7 @@ jobs:
         # Node.js versions
         node-version: [18, 20]
         # Hardhat releases: https://github.com/NomicFoundation/hardhat/releases
-        hardhat-version: [2.22.9] # Keep ONLY ONE version.
+        hardhat-version: [2.22] # Keep ONLY ONE version.
 
     steps:
       - name: Checkout Code
