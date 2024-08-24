@@ -10,11 +10,13 @@ const BalanceDisplay: React.FC<BalanceDisplayProps> = ({ address }) => {
     const { data: balance } = useBalance({ address: address as `0x${string}` });
 
     if (!balance) return null;
+    // Convertir la balance en chaîne de caractères en utilisant `formatEther`.
+    const balanceInETH = formatEther(balance.value);
 
     return (
-        <>
-            {parseFloat(formatEther(balance.value)).toFixed(4)} {balance.symbol}
-        </>
+        <span title={`${balanceInETH} ${balance.symbol}`}>
+            {parseFloat(balanceInETH).toFixed(4)} {balance.symbol}
+        </span>
     );
 };
 
