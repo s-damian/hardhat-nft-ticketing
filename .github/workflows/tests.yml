@@ -35,7 +35,7 @@ jobs:
         run: npm init -y
 
       - name: Install Hardhat
-        run: npm install --save-dev hardhat@${{ matrix.hardhat-version }}
+        run: npm install --save-dev hardhat@2.22.9
 
       - name: Install NPM Dependencies
         run: npm install
