@@ -24,10 +24,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
     return (
         <div className="container mx-auto text-center flex flex-col min-h-screen">
-            <NavBar />
-
-            <div className="flex-grow bg-gray-100 flex flex-col py-12 px-8">
-                <ClientOnly>
+            <ClientOnly>
+                <NavBar />
+                <div className="flex-grow bg-gray-100 flex flex-col py-12 px-8">
                     {isConnected ? (
                         <>
                             {children}
@@ -51,9 +50,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                             <p className="text-xl text-gray-800 mb-4">Please connect your wallet to continue.</p>
                         </div>
                     )}
-                </ClientOnly>
-            </div>
-
+                </div>
+            </ClientOnly>
             <footer className="bg-blue-800 text-white py-4">
                 <p>
                     &copy; {new Date().getFullYear()} |{" "}

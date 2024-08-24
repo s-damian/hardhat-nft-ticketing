@@ -9,7 +9,7 @@ import { config } from "../../config/wagmi-config";
 // Create a client
 const queryClient = new QueryClient();
 
-export default function AppWalletProvider({ children }: { children: React.ReactNode }) {
+const AppWalletProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     return (
         <WagmiProvider config={config}>
             <QueryClientProvider client={queryClient}>
@@ -17,4 +17,6 @@ export default function AppWalletProvider({ children }: { children: React.ReactN
             </QueryClientProvider>
         </WagmiProvider>
     );
-}
+};
+
+export default AppWalletProvider;

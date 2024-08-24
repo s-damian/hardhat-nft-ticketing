@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { ConnectKitButton } from "connectkit";
-import { useAccount, useBalance } from "wagmi";
-import { formatEther } from "viem";
+import { useAccount, useBalance, useChainId } from "wagmi";
 import { FaBars, FaTimes } from "react-icons/fa";
+import BalanceDisplay from "./wallet/BalanceDisplay";
+import NetworkName from "./wallet/NetworkName";
+import NetworkSwitcher from "./wallet/NetworkSwitcher";
 
 const NavBar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
-
     const { address, isConnected } = useAccount();
     const { data: balance } = useBalance({ address });
+    const chainId = useChainId(); // Hook pour obtenir le réseau actuel.
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -40,9 +42,14 @@ const NavBar: React.FC = () => {
                         </Link>
                     </li>
                     <li className="ml-auto">
+                        <span className=" mr-2">
+                            <NetworkSwitcher />
+                        </span>
+                    </li>
+                    <li>
                         {isConnected && balance ? (
                             <span className="text-yellow-300 pr-2">
-                                {parseFloat(formatEther(balance.value)).toFixed(4)} {balance.symbol}
+                                <BalanceDisplay address={address} />
                             </span>
                         ) : null}
                     </li>
@@ -79,9 +86,12 @@ const NavBar: React.FC = () => {
                         </Link>
                     </li>
                     <li className="w-full text-center mt-4">
+                        <NetworkSwitcher />
+                    </li>
+                    <li className="w-full text-center mt-2">
                         {isConnected && balance ? (
                             <span className="text-yellow-300 pr-2">
-                                {parseFloat(formatEther(balance.value)).toFixed(4)} {balance.symbol}
+                                <BalanceDisplay address={address} />
                             </span>
                         ) : null}
                     </li>
