@@ -15,7 +15,7 @@ const NetworkSwitcher: React.FC = () => {
     };
 
     return (
-        <select value={chainId} onChange={handleNetworkChange} className="bg-yellow-600 text-white rounded-md outline-none px-3 py-1">
+        <select value={chainId} onChange={handleNetworkChange} className="bg-yellow-500 text-white rounded-md outline-none px-3 py-1">
             <option value="1">Ethereum Mainnet</option>
             <option value="11155111">Sepolia</option>
             <option value="31337">Hardhat Local</option>
