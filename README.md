@@ -18,9 +18,9 @@
 [![Static Analysis](https://github.com/s-damian/hardhat-nft-ticketing/actions/workflows/static-analysis.yml/badge.svg)](https://github.com/s-damian/hardhat-nft-ticketing/actions/workflows/static-analysis.yml)
 [![License](https://img.shields.io/badge/License-MIT-blue)](./LICENSE)
 
-This **NFT Ethereum Project** is developed by [Stephen Damian](https://github.com/s-damian).
+This **NFT Ethereum Project** is developed by [Stephen Damian](https://github.com/s-damian)
 
-PS: I developed the same project with [Solana / Anchor](https://github.com/s-damian/anchor-nft-ticketing).
+PS: I developed the same project with [Solana / Anchor](https://github.com/s-damian/anchor-nft-ticketing)
 
 
 ## Project Overview
