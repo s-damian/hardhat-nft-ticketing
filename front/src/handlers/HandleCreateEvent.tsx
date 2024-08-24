@@ -2,9 +2,7 @@ import { parseEther } from "viem";
 import { toast } from "react-toastify";
 import { writeContract } from "@wagmi/core";
 import { config } from "../../config/wagmi-config";
-import EventManagerABI from "../../../artifacts/contracts/EventManager.sol/EventManager.json";
-
-const EVENT_MANAGER_ADDRESS = process.env.NEXT_PUBLIC_EVENT_MANAGER_ADDRESS as `0x${string}`;
+import { EVENT_MANAGER_CONTRACT_ADDRESS, EVENT_MANAGER_ABI } from "../../config/contracts";
 
 export const handleCreateEvent = async (
     e: React.FormEvent,
@@ -24,8 +22,8 @@ export const handleCreateEvent = async (
         const price = parseEther(ticketPrice);
 
         const hash = await writeContract(config, {
-            address: EVENT_MANAGER_ADDRESS,
-            abi: EventManagerABI.abi,
+            address: EVENT_MANAGER_CONTRACT_ADDRESS,
+            abi: EVENT_MANAGER_ABI,
             functionName: "createEvent",
             args: [title, description, BigInt(dateTime), location, price],
             account: address,
