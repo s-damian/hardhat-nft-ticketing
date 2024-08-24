@@ -22,12 +22,10 @@ npx hardhat init
 ```
 
 
-
 ### Run Hardhat Network (local testnet)
 ```bash
 npx hardhat test
 ```
-
 
 
 ### Démarrer un réseau local avec Hardhat
@@ -39,7 +37,6 @@ npx hardhat node
 ```bash
 npx hardhat run scripts/deploy.ts --network localhost
 ```
-
 
 
 ## Custom Scripts
@@ -59,3 +56,13 @@ Dans ce fichier de script, il faut remplacer "recipient" par l'adresse MetaMask 
 ```bash
 npx hardhat run scripts/getTxDetails.ts --network localhost
 ```
+
+
+## Networks
+
+| Name                            | Consensus                  | Type              | Equivalent on Solana |
+|---------------------------------|----------------------------|-------------------|----------------------|
+| **Localhost (Hardhat Network)** | Usually PoA (configurable) | Local development | Localnet             |
+| **Sepolia**                     | PoS (Proof of Stake)       | Public testnet    | Devnet               |
+| **Goerli**                      | PoS (Proof of Stake)       | Public testnet    | Testnet              |
+| **Mainnet**                     | PoS (Proof of Stake)       | Production        | Mainnet              |

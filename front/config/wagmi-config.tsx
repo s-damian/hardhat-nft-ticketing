@@ -13,6 +13,8 @@ export const config = createConfig({
 });
 
 /*
+# MetaMask en Local :
+
 Config MetaMask pour travailler en Local (avec hardhat) :
 
 Ouvrir MetaMask et ajoutez un nouveau réseau avec les paramètres suivants :
@@ -24,4 +26,28 @@ PS : il faut d'abord run en Terminal : npx hardhat node
 - ID de chaîne : 31337
 - Symbole de la devise : ETH
 - URL de l'explorateur de blocs : (laissez vide)
+*/
+
+/*
+# Réseaux Ethereum :
+
+## Localhost (Hardhat Network) :
+C'est un réseau local utilisé pour les tests rapides pendant le développement.
+(Équivalent de localnet sur Solana).
+
+## Testnets :
+
+### Sepolia :
+Un autre testnet utilisé par la communauté, similaire à devnet ou testnet sur Solana.
+(Similaire à devnet ou testnet sur Solana).
+Utilisant le consensus Proof of Authority (PoA).
+
+### Goerli :
+L'un des testnets les plus utilisés actuellement, c'est l'équivalent de testnet sur Solana.
+(Équivalent de testnet sur Solana).
+Utilisant le consensus Proof of Authority (PoA).
+
+## Mainnet :
+Le réseau principal Ethereum, où se déroulent les transactions réelles avec de vrais ETH.
+(Équivalent à mainnet sur Solana).
 */
