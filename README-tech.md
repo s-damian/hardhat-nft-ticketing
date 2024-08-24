@@ -2,11 +2,11 @@
 ## Init projet
 
 ```bash
-mkdir /[your-path]/hardhat-nft-ticketing
+mkdir /<your-path>/hardhat-nft-ticketing
 ```
 
 ```bash
-cd /[your-path]/hardhat-nft-ticketing
+cd /<your-path>/hardhat-nft-ticketing
 ```
 
 ```bash
@@ -22,11 +22,13 @@ npx hardhat init
 ```
 
 
-### Run Hardhat Network (local testnet)
+
+## Localnet
+
+### LAncer les test (en local)
 ```bash
 npx hardhat test
 ```
-
 
 ### Démarrer un réseau local avec Hardhat
 ```bash
@@ -39,23 +41,32 @@ npx hardhat run scripts/deploy.ts --network localhost
 ```
 
 
+
+## Sepolia
+```bash
+npx hardhat run scripts/deploy.ts --network sepolia
+```
+
+
+
 ## Custom Scripts
 
 ### Get Solidity Version
 ```bash
-npx hardhat run scripts/getSolidityVersion.ts --network localhost
+npx hardhat run scripts/getSolidityVersion.ts --network <network>
 ```
 
 ### Send Ethers
 ```bash
-npx hardhat run scripts/sendETH.ts --network localhost
+npx hardhat run scripts/sendETH.ts --network <network>
 ```
 
 ### Get Transaction Details
 Dans ce fichier de script, il faut remplacer "recipient" par l'adresse MetaMask que vous voulez recharger.
 ```bash
-npx hardhat run scripts/getTxDetails.ts --network localhost
+npx hardhat run scripts/getTxDetails.ts --network <network>
 ```
+
 
 
 ## Networks
