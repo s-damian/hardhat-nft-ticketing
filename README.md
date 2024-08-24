@@ -10,9 +10,9 @@
 <img src="https://raw.githubusercontent.com/s-damian/medias/main/technos-logos/hardhat.webp" alt="Hardhat Logo" height="100px">
 </a>
 
-> #Solidity #Ethereum #Hardhat #NFT # Web3
+> #Solidity 💎 #Ethereum 🔗 #Hardhat ⚒️ #React ⚛️ #NFT 🖼️ #Web3 🔁
 
-> NFT Marketplace Event Ticketing on the Ethereum Blockchain
+> NFT Marketplace Event Ticketing on the **Ethereum Blockchain**
 
 [![Build](https://github.com/s-damian/hardhat-nft-ticketing/actions/workflows/tests.yml/badge.svg)](https://github.com/s-damian/hardhat-nft-ticketing/actions/workflows/tests.yml)
 [![Static Analysis](https://github.com/s-damian/hardhat-nft-ticketing/actions/workflows/static-analysis.yml/badge.svg)](https://github.com/s-damian/hardhat-nft-ticketing/actions/workflows/static-analysis.yml)
