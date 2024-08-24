@@ -1,16 +1,13 @@
 import React from "react";
 import { formatEther } from "viem";
-import { useBalance } from "wagmi";
+import { useBalance, useAccount } from "wagmi";
 
-interface BalanceDisplayProps {
-    address: string | undefined;
-}
+const BalanceDisplay: React.FC = () => {
+    const { address, isConnected } = useAccount();
+    const { data: balance } = useBalance({ address });
 
-const BalanceDisplay: React.FC<BalanceDisplayProps> = ({ address }) => {
-    const { data: balance } = useBalance({ address: address as `0x${string}` });
+    if (!isConnected || !balance) return null;
 
-    if (!balance) return null;
-    // Convertir la balance en chaîne de caractères en utilisant `formatEther`.
     const balanceInETH = formatEther(balance.value);
 
     return (

@@ -1,17 +1,12 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { ConnectKitButton } from "connectkit";
-import { useAccount, useBalance, useChainId } from "wagmi";
 import { FaBars, FaTimes } from "react-icons/fa";
 import BalanceDisplay from "./wallet/BalanceDisplay";
-import NetworkName from "./wallet/NetworkName";
 import NetworkSwitcher from "./wallet/NetworkSwitcher";
 
 const NavBar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const { address, isConnected } = useAccount();
-    const { data: balance } = useBalance({ address });
-    const chainId = useChainId(); // Hook pour obtenir le réseau actuel.
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -47,11 +42,9 @@ const NavBar: React.FC = () => {
                         </span>
                     </li>
                     <li>
-                        {isConnected && balance ? (
-                            <span className="text-yellow-300 pr-2">
-                                <BalanceDisplay address={address} />
-                            </span>
-                        ) : null}
+                        <span className="text-yellow-300 pr-2">
+                            <BalanceDisplay />
+                        </span>
                     </li>
                     <li>
                         <ConnectKitButton />
@@ -89,11 +82,9 @@ const NavBar: React.FC = () => {
                         <NetworkSwitcher />
                     </li>
                     <li className="w-full text-center mt-2">
-                        {isConnected && balance ? (
-                            <span className="text-yellow-300 pr-2">
-                                <BalanceDisplay address={address} />
-                            </span>
-                        ) : null}
+                        <span className="text-yellow-300 pr-2">
+                            <BalanceDisplay />
+                        </span>
                     </li>
                     <li className="w-full text-center mt-2 mb-2">
                         <ConnectKitButton />
