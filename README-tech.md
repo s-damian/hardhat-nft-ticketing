@@ -25,17 +25,20 @@ npx hardhat init
 
 ## Localnet
 
-### LAncer les test (en local)
+### Run tests (local)
+
 ```bash
 npx hardhat test
 ```
 
-### Démarrer un réseau local avec Hardhat
+### Start a local network with Hardhat
+
 ```bash
 npx hardhat node
 ```
 
-### Déployer le contrat sur le réseau local
+### Deploy the contract on the local network
+
 ```bash
 npx hardhat run scripts/deploy.ts --network localhost
 ```
@@ -43,6 +46,7 @@ npx hardhat run scripts/deploy.ts --network localhost
 
 
 ## Sepolia
+
 ```bash
 npx hardhat run scripts/deploy.ts --network sepolia
 ```
@@ -52,17 +56,20 @@ npx hardhat run scripts/deploy.ts --network sepolia
 ## Custom Scripts
 
 ### Get Solidity Version
+
 ```bash
 npx hardhat run scripts/getSolidityVersion.ts --network <network>
 ```
 
 ### Send Ethers
+
 ```bash
 npx hardhat run scripts/sendETH.ts --network <network>
 ```
 
 ### Get Transaction Details
-Dans ce fichier de script, il faut remplacer "recipient" par l'adresse MetaMask que vous voulez recharger.
+
+In this script file, you need to replace "recipient" with the MetaMask address you want to reload.
 ```bash
 npx hardhat run scripts/getTxDetails.ts --network <network>
 ```

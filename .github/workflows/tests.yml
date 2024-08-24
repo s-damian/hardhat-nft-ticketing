@@ -27,7 +27,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-
       - name: Init NPM Project
         run: npm init -y
 
@@ -36,7 +35,6 @@ jobs:
 
       - name: Install NPM Dependencies
         run: npm install
-
 
       - name: Compile Hardhat Contracts
         run: npx hardhat compile

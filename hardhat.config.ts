@@ -9,12 +9,13 @@ const ETH_PRIVATE_KEY = process.env.ETH_PRIVATE_KEY || "";
 
 const config: HardhatUserConfig = {
     solidity: "0.8.24",
-    
     networks: {
-        sepolia: {
-            url: SEPOLIA_RPC_URL,
-            accounts: [ETH_PRIVATE_KEY],
-        }
+        ...(ETH_PRIVATE_KEY && {
+            sepolia: {
+                url: SEPOLIA_RPC_URL,
+                accounts: [ETH_PRIVATE_KEY],
+            },
+        }),
     },
 };
 
