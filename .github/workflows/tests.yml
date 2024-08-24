@@ -39,15 +39,10 @@ jobs:
       - name: Compile Hardhat Contracts
         run: npx hardhat compile
 
-      - name: Debug Project Structure
+      - name: Debug Environment
         run: |
           echo "Current directory: $(pwd)"
           echo "PATH: $PATH"
-          echo "Directory structure:"
-          tree -L 3 || ls -R
-
-      - name: Debug Environment
-        run: |
           echo "Hardhat version: $(npx hardhat --version)"
           echo "Node.js version: $(node --version)"
           echo "Solidity version: $(npx hardhat run scripts/getSolidityVersion.ts)"
