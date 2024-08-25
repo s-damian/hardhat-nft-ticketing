@@ -122,6 +122,10 @@ npx hardhat node
 npx hardhat run scripts/deploy.ts --network localhost
 ```
 
+### Config NEXT_PUBLIC_EVENT_MANAGER_CONTRACT_ADDRESS en var
+
+In the `.env` of the Next.js App part (`/<your-path>/hardhat-nft-ticketing/front/.env` file), you need to configure the `NEXT_PUBLIC_EVENT_MANAGER_CONTRACT_ADDRESS` environment variable.
+
 ### Run Front-End (Next.js App):
 
 ```bash
