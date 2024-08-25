@@ -35,7 +35,11 @@ NFT Marketplace Event Ticketing - A decentralized application for managing and v
 See more images here:
 [Images](./img/)
 
-See further technical details here:
+
+
+## Documentation
+
+- See further technical details here:
 [README-tech.md](./docs/README-tech.md)
 
 
