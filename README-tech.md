@@ -1,4 +1,15 @@
-## Run tests (local)
+## Networks
+
+| Name                            | Consensus                  | Type              | Equivalent on Solana |
+|---------------------------------|----------------------------|-------------------|----------------------|
+| **Localhost (Hardhat Network)** | Usually PoA (configurable) | Local development | Localnet             |
+| **Sepolia**                     | PoS (Proof of Stake)       | Public testnet    | Devnet               |
+| **Goerli**                      | PoS (Proof of Stake)       | Public testnet    | Testnet              |
+| **Mainnet**                     | PoS (Proof of Stake)       | Production        | Mainnet              |
+
+
+
+## Run tests (Localnet)
 
 ```bash
 npx hardhat test
@@ -50,17 +61,6 @@ In this script file, you need to replace "recipient" with the MetaMask address y
 ```bash
 npx hardhat run scripts/getTxDetails.ts --network <network>
 ```
-
-
-
-## Networks
-
-| Name                            | Consensus                  | Type              | Equivalent on Solana |
-|---------------------------------|----------------------------|-------------------|----------------------|
-| **Localhost (Hardhat Network)** | Usually PoA (configurable) | Local development | Localnet             |
-| **Sepolia**                     | PoS (Proof of Stake)       | Public testnet    | Devnet               |
-| **Goerli**                      | PoS (Proof of Stake)       | Public testnet    | Testnet              |
-| **Mainnet**                     | PoS (Proof of Stake)       | Production        | Mainnet              |
 
 
 
