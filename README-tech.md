@@ -1,4 +1,3 @@
-
 ## Init projet
 
 ```bash
@@ -47,7 +46,7 @@ npx hardhat run scripts/deploy.ts --network localhost
 
 
 
-## Sepolia (Devnet)
+## Sepolia (Testnet)
 
 ```bash
 npx hardhat run scripts/deploy.ts --network sepolia

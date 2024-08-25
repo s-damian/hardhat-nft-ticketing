@@ -37,7 +37,7 @@ const NavBar: React.FC = () => {
                         </Link>
                     </li>
                     <li className="ml-auto">
-                        <span className=" mr-2">
+                        <span className="mr-2">
                             <NetworkSwitcher />
                         </span>
                     </li>
