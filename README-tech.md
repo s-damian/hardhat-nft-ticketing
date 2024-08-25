@@ -45,25 +45,25 @@ npm run lint:fix
 
 
 
-## Network - Localnet
+## Deploy
 
-Start a local network with Hardhat:
+### Deploy on Local Network
+
+First, start a local network with Hardhat:
 
 ```bash
 npx hardhat node
 ```
 
-Deploy the contract on the local network:
+Then, deploy on the local network:
 
 ```bash
 npx hardhat run scripts/deploy.ts --network localhost
 ```
 
+### Deploy on Sepolia (Testnet) Network
 
-
-## Network - Sepolia (Testnet)
-
-Deploy the contract on the Sepolia testnet network:
+Deploy on the Sepolia testnet network:
 
 ```bash
 npx hardhat run scripts/deploy.ts --network sepolia

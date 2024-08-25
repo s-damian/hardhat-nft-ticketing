@@ -52,6 +52,88 @@ See more images here:
 
 
 
+## Getting Started (Localnet)
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/s-damian/hardhat-nft-ticketing.git
+```
+
+### Install Dependencies
+
+For the Hardhat App:
+
+```bash
+cd /<your-path>/hardhat-nft-ticketing
+```
+
+```bash
+npm install
+```
+
+For the Next.js App:
+
+```bash
+cd /<your-path>/hardhat-nft-ticketing/front
+```
+
+```bash
+npm install
+```
+
+### Environment Setup
+
+Create a  ```.env ``` file for the Hardhat App:
+
+```bash
+cd /<your-path>/hardhat-nft-ticketing
+```
+
+```bash
+cp .env.example .env
+```
+
+Create a  ```.env ``` file for the Next.js App:
+
+```bash
+cd /<your-path>/hardhat-nft-ticketing/front
+```
+
+```bash
+cp .env.example .env
+```
+
+### Run Hardhat Localhost Network
+
+```bash
+cd /<your-path>/hardhat-nft-ticketing
+```
+
+Start a local network with Hardhat:
+
+```bash
+npx hardhat node
+```
+
+### Deploy on the local network
+
+```bash
+npx hardhat run scripts/deploy.ts --network localhost
+```
+
+### Run Front-End (Next.js App):
+
+```bash
+cd /<your-path>/hardhat-nft-ticketing/front
+```
+
+```bash
+npm run dev
+```
+
+
+
 ## Code Structure
 
 ```bash
