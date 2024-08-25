@@ -9,6 +9,16 @@
 
 
 
+## thereum Block Confirmations
+
+| **Option**    | **Description** |
+|---------------|---|
+| **pending**   | The transaction has been submitted to the network and is currently awaiting inclusion in a block. It is not yet part of the blockchain and could still be replaced or canceled. |
+| **mined**     | The transaction has been included in a block and is considered mined. It is now part of the blockchain but could still be reorganized in the event of a chain reorganization. The number of confirmations indicates how many blocks have been added on top of the block containing this transaction. |
+| **finality**  | The transaction has been included in a block and has accumulated a sufficient number of confirmations, making it highly unlikely to be reversed. This level ensures a high degree of certainty that the transaction is permanent and irreversible. |
+
+
+
 ## Run tests (Localnet)
 
 ```bash
