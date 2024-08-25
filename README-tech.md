@@ -63,7 +63,7 @@ npx hardhat run scripts/deploy.ts --network localhost
 
 ## Network - Sepolia (Testnet)
 
-Deploy the contract on the Sepolia network:
+Deploy the contract on the Sepolia testnet network:
 
 ```bash
 npx hardhat run scripts/deploy.ts --network sepolia
