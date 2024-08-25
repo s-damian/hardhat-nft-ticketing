@@ -97,7 +97,7 @@ Create a  `.env ` file for the Next.js App:
 cp ./front/.env.example ./front/.env
 ```
 
-### Run Hardhat Localhost Network
+### Run Hardhat on Local Network
 
 Start a local network with Hardhat:
 
