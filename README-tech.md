@@ -17,7 +17,7 @@ npx hardhat test
 
 
 
-## Localnet
+## Network - Localnet
 
 ### Start a local network with Hardhat
 
@@ -33,7 +33,7 @@ npx hardhat run scripts/deploy.ts --network localhost
 
 
 
-## Sepolia (Testnet)
+## Network - Sepolia (Testnet)
 
 ```bash
 npx hardhat run scripts/deploy.ts --network sepolia
