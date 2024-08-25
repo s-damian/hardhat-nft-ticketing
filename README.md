@@ -42,6 +42,9 @@ See more images here:
 - See further technical details here:
 [README-tech.md](./docs/README-tech.md)
 
+- To switch from the Localnet to Devnet:
+[README-tech.md](./docs/Localnet-to-Devnet.md)
+
 
 
 ## Prerequisites
