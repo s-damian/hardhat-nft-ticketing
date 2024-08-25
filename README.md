@@ -35,6 +35,9 @@ NFT Marketplace Event Ticketing - A decentralized application for managing and v
 See more images here:
 [Images](./img/)
 
+See further technical details here:
+[README-tech.md](./README-tech.md)
+
 
 
 ## Prerequisites
@@ -60,13 +63,15 @@ See more images here:
 git clone https://github.com/s-damian/hardhat-nft-ticketing.git
 ```
 
-### Install Dependencies
-
-For the Hardhat App:
+### Go to the Hardhat Directory
 
 ```bash
 cd /<your-path>/hardhat-nft-ticketing
 ```
+
+### Install Dependencies
+
+For the Hardhat App:
 
 ```bash
 npm install
@@ -75,40 +80,24 @@ npm install
 For the Next.js App:
 
 ```bash
-cd /<your-path>/hardhat-nft-ticketing/front
-```
-
-```bash
-npm install
+npm install --prefix ./app/front
 ```
 
 ### Environment Setup
 
-Create a  ```.env ``` file for the Hardhat App:
-
-```bash
-cd /<your-path>/hardhat-nft-ticketing
-```
+Create a  `.env ` file for the Hardhat App:
 
 ```bash
 cp .env.example .env
 ```
 
-Create a  ```.env ``` file for the Next.js App:
+Create a  `.env ` file for the Next.js App:
 
 ```bash
-cd /<your-path>/hardhat-nft-ticketing/front
-```
-
-```bash
-cp .env.example .env
+cp ./front/.env.example ./front/.env
 ```
 
 ### Run Hardhat Localhost Network
-
-```bash
-cd /<your-path>/hardhat-nft-ticketing
-```
 
 Start a local network with Hardhat:
 
@@ -116,18 +105,22 @@ Start a local network with Hardhat:
 npx hardhat node
 ```
 
-And deploy on the local network:
+## Deploy Contract(s) on Local Network
 
 ```bash
 npx hardhat run scripts/deploy.ts --network localhost
 ```
 
-### Configure Contacts Address Environment Variables
+### Configure Environment Variables
 
 In the `.env` of the Next.js App part (`/<your-path>/hardhat-nft-ticketing/front/.env` file), you need to configure the following environment variables:
+
+#### For Contact Addresses
 - `NEXT_PUBLIC_EVENT_MANAGER_CONTRACT_ADDRESS`
 
-### Run Front-End (Next.js App):
+### Run Front-End (Next.js App)
+
+Go to the Next.js App Directory:
 
 ```bash
 cd /<your-path>/hardhat-nft-ticketing/front
