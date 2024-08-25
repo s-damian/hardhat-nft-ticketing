@@ -116,15 +116,16 @@ Start a local network with Hardhat:
 npx hardhat node
 ```
 
-### Deploy on the local network
+### Deploy on the Local Network
 
 ```bash
 npx hardhat run scripts/deploy.ts --network localhost
 ```
 
-### Config NEXT_PUBLIC_EVENT_MANAGER_CONTRACT_ADDRESS en var
+### Configure Contacts Address Environment Variables
 
-In the `.env` of the Next.js App part (`/<your-path>/hardhat-nft-ticketing/front/.env` file), you need to configure the `NEXT_PUBLIC_EVENT_MANAGER_CONTRACT_ADDRESS` environment variable.
+In the `.env` of the Next.js App part (`/<your-path>/hardhat-nft-ticketing/front/.env` file), you need to configure the following environment variables:
+- `NEXT_PUBLIC_EVENT_MANAGER_CONTRACT_ADDRESS`
 
 ### Run Front-End (Next.js App):
 
