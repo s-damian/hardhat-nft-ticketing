@@ -97,6 +97,8 @@ Create a  `.env ` file for the Next.js App:
 cp ./front/.env.example ./front/.env
 ```
 
+Ensure all necessary environment variables are configured in the `.env` files.
+
 ### Run Hardhat on Local Network
 
 Start a local network with Hardhat:
@@ -125,6 +127,8 @@ Go to the Next.js App Directory:
 ```bash
 cd /<your-path>/hardhat-nft-ticketing/front
 ```
+
+Start the development server:
 
 ```bash
 npm run dev
