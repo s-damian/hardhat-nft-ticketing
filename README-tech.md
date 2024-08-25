@@ -17,6 +17,34 @@ npx hardhat test
 
 
 
+## Lint
+
+### Solidity Lint
+
+```bash
+cd /<your-path>/hardhat-nft-ticketing
+```
+
+Lint and format the code :
+
+```bash
+npm run lint-solhint:fix
+```
+
+### JS Lint
+
+```bash
+cd /<your-path>/hardhat-nft-ticketing
+```
+
+Lint and format the code :
+
+```bash
+npm run lint:fix
+```
+
+
+
 ## Network - Localnet
 
 ### Start a local network with Hardhat
