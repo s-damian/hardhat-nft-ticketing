@@ -1,8 +1,10 @@
 ## Localnet to Testnet (Sepolia)
 
-### Créer un compte Infura ou Alchemy
+### Create an Infura or Alchemy account
 
-Pour interagir avec le réseau Sepolia, vous aurez besoin d'un fournisseur de service Ethereum comme Infura ou Alchemy.
+To interact with the Sepolia network, you will need an Ethereum service provider like Infura or Alchemy.
+
+> In the following example, we will use Ynfura.
 
 
 ### Environment Variables
