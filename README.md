@@ -31,7 +31,7 @@ PS: I developed the same project with [Solana / Anchor](https://github.com/s-dam
 - [Prerequisites](#prerequisites)
 - [Technologies](#technologies)
 - [Getting Started (Localnet)](#getting-started-localnet)
-- [Localnet to Testnet](#localnet-to-testnet)
+- [Transition: Localnet to Testnet](#Transition-localnet-to-testnet)
 - [Code Structure](#code-structure)
 - [License](#license)
 
@@ -189,7 +189,7 @@ http://localhost:3000
 
 
 
-## Localnet to Testnet
+## Transition: Localnet to Testnet
 
 *Preparing for Public Deployment: Transition from Localnet to Sepolia Testnet*
 
