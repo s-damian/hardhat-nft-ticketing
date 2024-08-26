@@ -42,8 +42,8 @@ See more images here:
 - See further technical details here:
 [Notes-tech](./docs/Notes-tech.md)
 
-- To switch from the **Localnet** to **Devnet**:
-[Localnet-to-Devnet.md](./docs/Localnet-to-Devnet.md)
+- To switch from the **Localnet** to **Testnet (Sepolia)**:
+[Localnet-to-*Testnet.md](./docs/Localnet-to-*Testnet.md)
 
 
 
@@ -70,11 +70,13 @@ See more images here:
 git clone https://github.com/s-damian/hardhat-nft-ticketing.git
 ```
 
+
 ### Go to the Hardhat Directory
 
 ```bash
 cd /<your-path>/hardhat-nft-ticketing
 ```
+
 
 ### Install Dependencies
 
@@ -89,6 +91,7 @@ For the Next.js App:
 ```bash
 npm install --prefix ./front
 ```
+
 
 ### Environment Setup
 
@@ -106,6 +109,7 @@ cp ./front/.env.example ./front/.env
 
 Ensure all necessary environment variables are configured in the `.env` files.
 
+
 ### Run Hardhat on Local Network
 
 Start a local network with Hardhat:
@@ -114,18 +118,22 @@ Start a local network with Hardhat:
 npx hardhat node
 ```
 
+
 ### Deploy Contract(s) on Local Network
 
 ```bash
 npx hardhat run scripts/deploy.ts --network localhost
 ```
 
-### Configure Environment Variables
 
-In the `.env` of the Next.js App part (`/<your-path>/hardhat-nft-ticketing/front/.env` file), you need to configure the following environment variables:
+### Environment Variables - Contact Addresses
 
-#### For Contact Addresses
-- `NEXT_PUBLIC_EVENT_MANAGER_CONTRACT_ADDRESS`
+In the `.env` of the Next.js App part (`./front/.env` file), you need to configure the following environment variable:
+
+```bash
+NEXT_PUBLIC_EVENT_MANAGER_CONTRACT_ADDRESS="<your-event-manager-contract-address>"
+```
+
 
 ### Run Front-End (Next.js App)
 
@@ -159,7 +167,7 @@ npm run dev
 │   │   │   └── [React handlers]
 │   │   └── utils
 │   │       └── [React utils]
-│   ├── .env.local
+│   ├── .env
 │   ├── package.json
 │   └── tailwind.config.ts
 ├── ignition

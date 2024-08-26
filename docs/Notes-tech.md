@@ -9,7 +9,7 @@
 
 
 
-## thereum Block Confirmations
+## Ethereum Block Confirmations
 
 | **Option**    | **Description** |
 |---------------|---|
@@ -69,14 +69,6 @@ Then, deploy on the local network:
 
 ```bash
 npx hardhat run scripts/deploy.ts --network localhost
-```
-
-### Deploy on Sepolia (Testnet) Network
-
-Deploy on the Sepolia testnet network:
-
-```bash
-npx hardhat run scripts/deploy.ts --network sepolia
 ```
 
 
