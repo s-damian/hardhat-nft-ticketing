@@ -27,7 +27,7 @@ PS: I developed the same project with [Solana / Anchor](https://github.com/s-dam
 ## Summary
 
 - [Project Overview](#project-overview)
-- [Documentation](#documentation)
+- [Various Documentations](#various-documentations)
 - [Prerequisites](#prerequisites)
 - [Technologies](#technologies)
 - [Getting Started (Localnet)](#getting-started-localnet)
@@ -50,7 +50,7 @@ See more images here:
 
 
 
-## Documentation
+## Various Documentations
 
 - See how to configure MetaMask for local development here:
 [MetaMask-for-Localnet.md](./docs/MetaMask-for-Localnet.md)
@@ -193,7 +193,7 @@ http://localhost:3000
 
 *Preparing for Public Deployment: Transition from Localnet to Sepolia Testnet*
 
-After successfully running your project locally, the next step is to deploy it on a public testnet like Sepolia. This section guides you through the process of configuring your environment, deploying your smart contracts to Sepolia, and updating your front-end to interact with the deployed contracts on the testnet.
+After successfully running your project locally, the next step is to deploy it on a public Testnet like Sepolia. This section guides you through the process of configuring your environment, deploying your smart contract(s) to Testnet, and updating your Front-End to interact with the deployed contract(s) on the Testnet.
 
 To switch from the **Localnet** to **Testnet**: [Localnet-to-Testnet.md](./docs/Localnet-to-Testnet.md)
 
