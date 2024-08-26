@@ -10,7 +10,7 @@ async function main() {
     // Obtenir l'adresse du contrat déployé
     const eventManagerAddress = await eventManager.getAddress();
 
-    console.log("EventManager deployed to:", eventManagerAddress);
+    console.log("EventManager Contract Address:", eventManagerAddress);
 }
 
 main().catch((error) => {

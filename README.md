@@ -122,7 +122,15 @@ npx hardhat node
 ```
 
 
-### Deploy Contract(s) on Local Network
+### Compile and Deploy
+
+Compile contract(s):
+
+```bash
+npx hardhat compile
+```
+
+Deploy contract(s) on local network:
 
 ```bash
 npx hardhat run scripts/deploy.ts --network localhost

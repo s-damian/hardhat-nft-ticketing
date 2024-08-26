@@ -29,9 +29,15 @@ NEXT_PUBLIC_SEPOLIA_RPC_URL="https://sepolia.infura.io/v3/<your-api-key>"
 ```
 
 
-### Deploy Contract(s) on Sepolia (Testnet) Network
+### Compile and Deploy
 
-Deploy on the Sepolia testnet network:
+Compile contract(s):
+
+```bash
+npx hardhat compile
+```
+
+Deploy contract(s) on Sepolia testnet network:
 
 ```bash
 npx hardhat run scripts/deploy.ts --network sepolia
