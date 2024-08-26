@@ -31,7 +31,7 @@ PS: I developed the same project with [Solana / Anchor](https://github.com/s-dam
 - [Prerequisites](#prerequisites)
 - [Technologies](#technologies)
 - [Getting Started (Localnet)](#getting-started-localnet)
-- [Transition: Localnet to Testnet](#Transition-localnet-to-testnet)
+- [Transition: Localnet to Testnet](#transition-localnet-to-testnet)
 - [Code Structure](#code-structure)
 - [License](#license)
 
