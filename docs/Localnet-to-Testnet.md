@@ -1,6 +1,6 @@
-# Preparing for Public Deployment: Transition from Localnet to Sepolia Testnet
+# Localnet to Testnet (Sepolia)
 
-## Localnet to Testnet (Sepolia)
+## Preparing for Public Deployment: Transition from Localnet to Sepolia Testnet
 
 ### Create an Infura or Alchemy account
 
