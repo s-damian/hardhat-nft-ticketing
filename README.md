@@ -114,7 +114,7 @@ Start a local network with Hardhat:
 npx hardhat node
 ```
 
-## Deploy Contract(s) on Local Network
+### Deploy Contract(s) on Local Network
 
 ```bash
 npx hardhat run scripts/deploy.ts --network localhost
