@@ -39,14 +39,14 @@ See more images here:
 
 ## Documentation
 
-- See further technical details here:
-[Notes-tech](./docs/Notes-tech.md)
-
 - See how to configure MetaMask for local development here:
 [MetaMask-for-Localnet.md](./docs/MetaMask-for-Localnet.md)
 
 - To switch from the **Localnet** to **Testnet (Sepolia)**:
 [Localnet-to-Testnet.md](./docs/Localnet-to-Testnet.md)
+
+- See further technical details here:
+[Notes-tech](./docs/Notes-tech.md)
 
 
 
