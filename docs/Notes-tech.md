@@ -55,20 +55,12 @@ npm run lint:fix
 
 
 
-## Deploy
+## Verify Deployment
 
-### Deploy on Local Network
-
-First, start a local network with Hardhat:
+Check if your contract is correctly deployed:
 
 ```bash
-npx hardhat node
-```
-
-Then, deploy on the local network:
-
-```bash
-npx hardhat run scripts/deploy.ts --network localhost
+npx hardhat verify --network sepolia DEPLOYED_CONTRACT_ADDRESS
 ```
 
 
