@@ -42,8 +42,11 @@ See more images here:
 - See further technical details here:
 [Notes-tech](./docs/Notes-tech.md)
 
+- See how to configure MetaMask for local development here:
+[MetaMask-for-Localnet.md](./docs/MetaMask-for-Localnet.md)
+
 - To switch from the **Localnet** to **Testnet (Sepolia)**:
-[Localnet-to-*Testnet.md](./docs/Localnet-to-*Testnet.md)
+[Localnet-to-Testnet.md](./docs/Localnet-to-Testnet.md)
 
 
 
@@ -135,6 +138,14 @@ NEXT_PUBLIC_EVENT_MANAGER_CONTRACT_ADDRESS="<your-event-manager-contract-address
 ```
 
 
+### MetaMask Wallet
+
+Configure your MetaMask for local development with Hardhat.
+
+> See how to configure MetaMask for local development here:
+[MetaMask-for-Localnet.md](./docs/MetaMask-for-Localnet.md)
+
+
 ### Run Front-End (Next.js App)
 
 Go to the Next.js App Directory:
@@ -147,6 +158,12 @@ Start the development server:
 
 ```bash
 npm run dev
+```
+
+And you can go to the URL:
+
+```bash
+http://localhost:3000
 ```
 
 

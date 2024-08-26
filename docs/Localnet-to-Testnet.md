@@ -29,11 +29,6 @@ NEXT_PUBLIC_SEPOLIA_RPC_URL="https://sepolia.infura.io/v3/<your-api-key>"
 ```
 
 
-### MetaMask Wallet
-
-In your MetaMask wallet settings, switch to **Sepolia**.
-
-
 ### Deploy Contract(s) on Sepolia (Testnet) Network
 
 Deploy on the Sepolia testnet network:
@@ -51,6 +46,11 @@ NEXT_PUBLIC_EVENT_MANAGER_CONTRACT_ADDRESS="<your-event-manager-contract-address
 ```
 
 
+### MetaMask Wallet
+
+In your MetaMask wallet settings, switch to **Sepolia**.
+
+
 ### Run Front-End (Next.js App)
 
 Go to the Next.js App Directory:
@@ -63,4 +63,10 @@ Start the development server:
 
 ```bash
 npm run dev
+```
+
+And you can go to the URL:
+
+```bash
+http://localhost:3000
 ```
