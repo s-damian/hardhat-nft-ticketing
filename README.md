@@ -24,6 +24,19 @@ PS: I developed the same project with [Solana / Anchor](https://github.com/s-dam
 
 
 
+## Summary
+
+- [Project Overview](#project-overview)
+- [Documentation](#documentation)
+- [Prerequisites](#prerequisites)
+- [Technologies](#technologies)
+- [Getting Started (Localnet)](#getting-started-localnet)
+- [Localnet to Testnet](#localnet-to-testnet)
+- [Code Structure](#code-structure)
+- [License](#license)
+
+
+
 ## Project Overview
 
 NFT Marketplace Event Ticketing - A decentralized application for managing and verifying event tickets as NFTs on the Ethereum blockchain.
@@ -42,7 +55,7 @@ See more images here:
 - See how to configure MetaMask for local development here:
 [MetaMask-for-Localnet.md](./docs/MetaMask-for-Localnet.md)
 
-- To switch from the **Localnet** to **Testnet (Sepolia)**:
+- To switch from the **Localnet** to **Testnet** (Sepolia):
 [Localnet-to-Testnet.md](./docs/Localnet-to-Testnet.md)
 
 - See further technical details here:
@@ -173,6 +186,13 @@ And you can go to the URL:
 ```bash
 http://localhost:3000
 ```
+
+
+
+## Localnet to Testnet
+
+To switch from the **Localnet** to **Testnet**:
+[Localnet-to-Testnet.md](./docs/Localnet-to-Testnet.md)
 
 
 
