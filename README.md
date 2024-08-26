@@ -191,8 +191,11 @@ http://localhost:3000
 
 ## Localnet to Testnet
 
-To switch from the **Localnet** to **Testnet**:
-[Localnet-to-Testnet.md](./docs/Localnet-to-Testnet.md)
+*Preparing for Public Deployment: Transition from Localnet to Sepolia Testnet*
+
+After successfully running your project locally, the next step is to deploy it on a public testnet like Sepolia. This section guides you through the process of configuring your environment, deploying your smart contracts to Sepolia, and updating your front-end to interact with the deployed contracts on the testnet.
+
+To switch from the **Localnet** to **Testnet**: [Localnet-to-Testnet.md](./docs/Localnet-to-Testnet.md)
 
 
 
