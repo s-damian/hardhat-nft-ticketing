@@ -1,4 +1,4 @@
-# Localnet to Testnet (Sepolia)
+# Localnet to Testnet - Ethereum / Hardhat
 
 ## Preparing for Public Deployment: Transition from Localnet to Sepolia Testnet
 
