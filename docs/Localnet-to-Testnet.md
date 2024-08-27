@@ -6,7 +6,7 @@
 
 To interact with the Sepolia network, you will need an Ethereum service provider like Infura or Alchemy.
 
-> In the following example, we will use Ynfura.
+> In the following example, we will use Infura.
 
 
 ### Environment Variables
@@ -47,7 +47,7 @@ Deploy contract(s) on Sepolia testnet network:
 npx hardhat run scripts/deploy.ts --network sepolia
 ```
 
-### Environment Variables - Contact Addresses
+### Environment Variables - Contract Addresses
 
 In the `.env` of the Next.js App part (`./front/.env` file), you need to configure the following environment variable:
 
@@ -75,7 +75,7 @@ Start the development server:
 npm run dev
 ```
 
-And you can go to the URL:
+Open your browser and go to:
 
 ```bash
 http://localhost:3000

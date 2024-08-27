@@ -20,7 +20,7 @@
 
 This **NFT Ethereum Project** is developed by [Stephen Damian](https://github.com/s-damian)
 
-PS: I developed the same project with [Solana / Anchor](https://github.com/s-damian/anchor-nft-ticketing)
+Note: I developed the same project with [Solana / Anchor](https://github.com/s-damian/anchor-nft-ticketing)
 
 
 
@@ -150,7 +150,7 @@ npx hardhat run scripts/deploy.ts --network localhost
 ```
 
 
-### Environment Variables - Contact Addresses
+### Environment Variables - Contract Addresses
 
 In the `.env` of the Next.js App part (`./front/.env` file), you need to configure the following environment variable:
 
@@ -181,7 +181,7 @@ Start the development server:
 npm run dev
 ```
 
-And you can go to the URL:
+Open your browser and go to:
 
 ```bash
 http://localhost:3000
@@ -193,7 +193,7 @@ http://localhost:3000
 
 *Preparing for Public Deployment: Transition from Localnet to Sepolia Testnet*
 
-After successfully running your project locally, the next step is to deploy it on a public Testnet like Sepolia. This section guides you through the process of configuring your environment, deploying your smart contract(s) to Testnet, and updating your Front-End to interact with the deployed contract(s) on the Testnet.
+After successfully running your project Locally, the next step is to deploy it to a public Testnet like Sepolia. This section guides you through the process of configuring your environment, deploying your smart contract(s) to the Testnet, and updating your Front-End to interact with the deployed contract(s) on the Testnet.
 
 To switch from the **Localnet** to **Testnet**: [Localnet-to-Testnet.md](./docs/Localnet-to-Testnet.md)
 
