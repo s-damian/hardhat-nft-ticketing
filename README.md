@@ -14,7 +14,7 @@
 
 > NFT Marketplace Event Ticketing on the **Ethereum Blockchain**
 
-[![Build](https://github.com/s-damian/hardhat-nft-ticketing/actions/workflows/tests.yml/badge.svg)](https://github.com/s-damian/hardhat-nft-ticketing/actions/workflows/tests.yml)
+[![Tests](https://github.com/s-damian/hardhat-nft-ticketing/actions/workflows/tests.yml/badge.svg)](https://github.com/s-damian/hardhat-nft-ticketing/actions/workflows/tests.yml)
 [![Static Analysis](https://github.com/s-damian/hardhat-nft-ticketing/actions/workflows/static-analysis.yml/badge.svg)](https://github.com/s-damian/hardhat-nft-ticketing/actions/workflows/static-analysis.yml)
 [![License](https://img.shields.io/badge/License-MIT-blue)](./LICENSE)
 
@@ -27,6 +27,7 @@ Note: I developed the same project with [Solana / Anchor](https://github.com/s-d
 ## Summary
 
 - [Project Overview](#project-overview)
+- [Roadmap](#roadmap)
 - [Various Documentations](#various-documentations)
 - [Prerequisites](#prerequisites)
 - [Technologies](#technologies)
@@ -34,6 +35,20 @@ Note: I developed the same project with [Solana / Anchor](https://github.com/s-d
 - [Transition: Localnet to Testnet](#transition-localnet-to-testnet)
 - [Code Structure](#code-structure)
 - [License](#license)
+
+
+
+## Roadmap
+
+- [x] MetaMask integration.
+- [x] Homepage.
+- [x] Create event.
+- [ ] Event listing.
+- [ ] Buy a ticket.
+- [ ] Generate NFTs.
+- [ ] Verify NFTs.
+- [ ] Integrate other wallets.
+- [ ] Event organizer dashboard.
 
 
 
