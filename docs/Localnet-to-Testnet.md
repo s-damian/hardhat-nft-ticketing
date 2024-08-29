@@ -24,7 +24,7 @@ ETH_PRIVATE_KEY="<your-ethereum-private-key>"
 
 #### Next.js App .env file :
 
-In the `.env` of the Next.js App part (`./front/.env` file), you need to configure the following environment variable:
+In the `.env` of the Next.js App part (`./frontend/.env` file), you need to configure the following environment variable:
 
 Config:
 
@@ -49,7 +49,7 @@ npx hardhat run scripts/deploy.ts --network sepolia
 
 ### Environment Variables - Contract Addresses
 
-In the `.env` of the Next.js App part (`./front/.env` file), you need to configure the following environment variable:
+In the `.env` of the Next.js App part (`./frontend/.env` file), you need to configure the following environment variable:
 
 ```bash
 NEXT_PUBLIC_EVENT_MANAGER_CONTRACT_ADDRESS="<your-event-manager-contract-address>"
@@ -66,7 +66,7 @@ In your MetaMask wallet settings, switch to **Sepolia**.
 Go to the Next.js App Directory:
 
 ```bash
-cd /<your-path>/hardhat-nft-ticketing/front
+cd /<your-path>/hardhat-nft-ticketing/frontend
 ```
 
 Start the development server:

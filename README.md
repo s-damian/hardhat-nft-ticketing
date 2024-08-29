@@ -120,7 +120,7 @@ npm install
 For the Next.js App:
 
 ```bash
-npm install --prefix ./front
+npm install --prefix ./frontend
 ```
 
 
@@ -135,7 +135,7 @@ cp .env.example .env
 Create a  `.env ` file for the Next.js App:
 
 ```bash
-cp ./front/.env.example ./front/.env
+cp ./frontend/.env.example ./frontend/.env
 ```
 
 Ensure all necessary environment variables are configured in the `.env` files.
@@ -167,7 +167,7 @@ npx hardhat run scripts/deploy.ts --network localhost
 
 ### Environment Variables - Contract Addresses
 
-In the `.env` of the Next.js App part (`./front/.env` file), you need to configure the following environment variable:
+In the `.env` of the Next.js App part (`./frontend/.env` file), you need to configure the following environment variable:
 
 ```bash
 NEXT_PUBLIC_EVENT_MANAGER_CONTRACT_ADDRESS="<your-event-manager-contract-address>"
@@ -187,7 +187,7 @@ Configure your MetaMask for local development with Hardhat.
 Go to the Next.js App Directory:
 
 ```bash
-cd /<your-path>/hardhat-nft-ticketing/front
+cd /<your-path>/hardhat-nft-ticketing/frontend
 ```
 
 Start the development server:
@@ -220,7 +220,7 @@ To switch from the **Localnet** to **Testnet**: [Localnet-to-Testnet.md](./docs/
 .
 ├── contracts
 │   └── [Smart contracts]
-├── front
+├── frontend
 │   ├── app
 │   │   └── [React pages]
 │   ├── src
