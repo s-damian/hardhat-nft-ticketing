@@ -11,7 +11,7 @@ To interact with the Sepolia network, you will need an Ethereum service provider
 
 ### Environment Variables
 
-- `.env` file (for the Hardhat App):
+- Modify your `.env` file (for the Hardhat App):
 
 In the `.env` of the Hardhat App, you need to configure the following environment variables:
 
@@ -22,7 +22,7 @@ SEPOLIA_RPC_URL="https://sepolia.infura.io/v3/<your-api-key>"
 ETH_PRIVATE_KEY="<your-ethereum-private-key>"
 ```
 
-- `./frontend/.env` file (for the Next.js App):
+- Modify your `./frontend/.env` file (for the Next.js App):
 
 In the `./frontend/.env` of the Next.js App, you need to configure the following environment variable:
 
