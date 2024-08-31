@@ -29,6 +29,13 @@ NEXT_PUBLIC_SEPOLIA_RPC_URL="https://sepolia.infura.io/v3/<your-api-key>"
 ```
 
 
+### Go to the Hardhat Directory
+
+```bash
+cd /<your-path>/hardhat-nft-ticketing
+```
+
+
 ### Compile and Deploy
 
 Compile contract(s):
