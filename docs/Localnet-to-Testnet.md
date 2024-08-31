@@ -50,6 +50,8 @@ Deploy contract(s) on Sepolia testnet network:
 npx hardhat run scripts/deploy.ts --network sepolia
 ```
 
+> In the terminal your EventManager Contract Address will be displayed.
+
 ### Environment Variables - Contract Addresses
 
 - In the `./frontend/.env` of the Next.js App, you need to configure the following environment variable:
