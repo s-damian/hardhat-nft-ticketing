@@ -44,7 +44,7 @@ describe("EventManager", function () {
             EVENT_DETAILS.location,
             EVENT_DETAILS.ticketPrice,
         );
-        console.log("createEvent - tx signature", createEventTx.hash); // Afficher le hash de la transaction.
+        console.log("createEvent - Transaction Hash:", createEventTx.hash); // Afficher le hash de la transaction.
 
         // Récupérer l'événement par ID.
         //const event = await eventManager.getEvent(1);

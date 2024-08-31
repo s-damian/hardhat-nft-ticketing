@@ -30,7 +30,7 @@ export const handleCreateEvent = async (
         });
 
         toast.success("Événement créé avec succès !");
-        console.log(`Transaction hash: ${hash}`);
+        console.log(`Transaction Hash: ${hash}`);
 
         resetForm();
     } catch (err) {
