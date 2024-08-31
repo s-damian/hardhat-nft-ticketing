@@ -165,7 +165,7 @@ npx hardhat run scripts/deploy.ts --network localhost
 
 ### Environment Variables - Contract Addresses
 
-In the `./frontend/.env` of the Next.js App, you need to configure the following environment variable:
+- In the `./frontend/.env` of the Next.js App, you need to configure the following environment variable:
 
 ```bash
 NEXT_PUBLIC_EVENT_MANAGER_CONTRACT_ADDRESS="<your-event-manager-contract-address>"
