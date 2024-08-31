@@ -126,19 +126,17 @@ npm install --prefix ./frontend
 
 ### Environment Setup
 
-Create a  `.env ` file for the Hardhat App:
+- Create a `.env` file (for the Hardhat App):
 
 ```bash
 cp .env.example .env
 ```
 
-Create a  `.env ` file for the Next.js App:
+- Create a `./frontend/.env` file (for the Next.js App):
 
 ```bash
 cp ./frontend/.env.example ./frontend/.env
 ```
-
-Ensure all necessary environment variables are configured in the `.env` files.
 
 
 ### Run Hardhat on Local Network
@@ -167,7 +165,7 @@ npx hardhat run scripts/deploy.ts --network localhost
 
 ### Environment Variables - Contract Addresses
 
-In the `.env` of the Next.js App part (`./frontend/.env` file), you need to configure the following environment variable:
+In the `./frontend/.env` of the Next.js App, you need to configure the following environment variable:
 
 ```bash
 NEXT_PUBLIC_EVENT_MANAGER_CONTRACT_ADDRESS="<your-event-manager-contract-address>"
@@ -178,8 +176,7 @@ NEXT_PUBLIC_EVENT_MANAGER_CONTRACT_ADDRESS="<your-event-manager-contract-address
 
 Configure your MetaMask for local development with Hardhat.
 
-> See how to configure MetaMask for local development here:
-[MetaMask-for-Localnet.md](./docs/MetaMask-for-Localnet.md)
+> See how to configure MetaMask for local development here: [MetaMask-for-Localnet.md](./docs/MetaMask-for-Localnet.md)
 
 
 ### Run Front-End (Next.js App)
