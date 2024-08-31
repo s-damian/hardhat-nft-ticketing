@@ -162,6 +162,8 @@ Deploy contract(s) on local network:
 npx hardhat run scripts/deploy.ts --network localhost
 ```
 
+> In the terminal your EventManager Contract Address will be displayed.
+
 
 ### Environment Variables - Contract Addresses
 
