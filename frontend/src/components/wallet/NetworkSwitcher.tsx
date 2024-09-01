@@ -1,6 +1,6 @@
 import React from "react";
 import { useChainId } from "wagmi";
-import { useAccount, useSwitchChain } from "wagmi";
+import { useSwitchChain } from "wagmi";
 
 const NetworkSwitcher: React.FC = () => {
     const chainId = useChainId(); // Hook pour obtenir le réseau actuel.

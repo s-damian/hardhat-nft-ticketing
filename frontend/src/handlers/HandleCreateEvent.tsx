@@ -1,8 +1,8 @@
 import { parseEther } from "viem";
 import { toast } from "react-toastify";
-import { writeContract } from "@wagmi/core";
+import { writeContract, waitForTransactionReceipt } from "@wagmi/core";
 import { config } from "../../config/wagmi-config";
-import { EVENT_MANAGER_CONTRACT_ADDRESS, EVENT_MANAGER_ABI } from "../../config/contracts";
+import { EVENT_MANAGER_ABI, EVENT_MANAGER_CONTRACT_ADDRESS } from "../../config/contracts";
 
 export const handleCreateEvent = async (
     e: React.FormEvent,
@@ -22,14 +22,21 @@ export const handleCreateEvent = async (
         const price = parseEther(ticketPrice);
 
         const hash = await writeContract(config, {
-            address: EVENT_MANAGER_CONTRACT_ADDRESS,
             abi: EVENT_MANAGER_ABI,
+            address: EVENT_MANAGER_CONTRACT_ADDRESS,
             functionName: "createEvent",
             args: [title, description, BigInt(dateTime), location, price],
             account: address,
         });
 
-        toast.success("Événement créé avec succès !");
+        const transactionReceipt = await waitForTransactionReceipt(config, {
+            confirmations: 2,
+            hash: hash,
+        });
+
+        console.log("transactionReceipt : ", transactionReceipt)
+
+        toast.success("Événement créé avec succès (avec 2 confirmations) !");
         console.log(`Transaction Hash: ${hash}`);
 
         resetForm();
