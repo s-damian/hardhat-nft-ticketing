@@ -34,14 +34,14 @@ export const handleCreateEvent = async (
             hash: hash,
         });
 
-        console.log("transactionReceipt : ", transactionReceipt)
+        console.log("transactionReceipt : ", transactionReceipt);
 
-        toast.success("Événement créé avec succès (avec 2 confirmations) !");
+        toast.success("Event created successfully (with 2 confirmations)!");
         console.log(`Transaction Hash: ${hash}`);
 
         resetForm();
     } catch (err) {
-        toast.error("Échec de la création de l'événement.");
+        toast.error("Failed to create event.");
         console.error("Failed to create event.", err);
     }
 };
