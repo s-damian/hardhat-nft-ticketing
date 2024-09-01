@@ -35,7 +35,7 @@ npx hardhat test
 cd /<your-path>/hardhat-nft-ticketing
 ```
 
-Lint and format the code :
+Lint and format the code:
 
 ```bash
 npm run lint-solhint:fix
@@ -47,7 +47,7 @@ npm run lint-solhint:fix
 cd /<your-path>/hardhat-nft-ticketing
 ```
 
-Lint and format the code :
+Lint and format the code:
 
 ```bash
 npm run lint:fix

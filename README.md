@@ -28,12 +28,12 @@ Note: I developed the same project with [Solana / Anchor](https://github.com/s-d
 
 - [Project Overview](#project-overview)
 - [Roadmap](#roadmap)
-- [Various Documentations](#various-documentations)
 - [Prerequisites](#prerequisites)
 - [Technologies](#technologies)
 - [Getting Started (Localnet)](#getting-started-localnet)
 - [Transition: Localnet to Testnet](#transition-localnet-to-testnet)
 - [Code Structure](#code-structure)
+- [Various Documentations](#various-documentations)
 - [License](#license)
 
 
@@ -62,19 +62,6 @@ NFT Marketplace Event Ticketing - A decentralized application for managing and v
 
 See more images here:
 [Images](./img/)
-
-
-
-## Various Documentations
-
-- See how to configure MetaMask for local development here:
-[MetaMask-for-Localnet.md](./docs/MetaMask-for-Localnet.md)
-
-- To switch from the **Localnet** to **Testnet** (Sepolia):
-[Localnet-to-Testnet.md](./docs/Localnet-to-Testnet.md)
-
-- See further technical details here:
-[Notes-tech](./docs/Notes-tech.md)
 
 
 
@@ -242,6 +229,19 @@ To switch from the **Localnet** to **Testnet**: [Localnet-to-Testnet.md](./docs/
 ├── package.json
 └── README.md
 ```
+
+
+
+## Various Documentations
+
+- See how to configure MetaMask for local development here:
+[MetaMask-for-Localnet.md](./docs/MetaMask-for-Localnet.md)
+
+- To switch from the **Localnet** to **Testnet** (Sepolia):
+[Localnet-to-Testnet.md](./docs/Localnet-to-Testnet.md)
+
+- See further technical details here:
+[Notes-tech](./docs/Notes-tech.md)
 
 
 
