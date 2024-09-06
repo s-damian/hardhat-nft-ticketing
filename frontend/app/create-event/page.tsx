@@ -47,7 +47,7 @@ const CreateEvent: React.FC = () => {
             <div className="flex items-center justify-center">
                 <div className="max-w-md w-full space-y-8 p-10 mt-3 bg-white rounded-xl shadow-md">
                     <h1 className="text-center text-3xl font-extrabold text-gray-900">Create an Event</h1>
-                    <p className="text-gray-600 mb-4">Create a unique event on the Solana blockchain and securely sell tickets as NFTs.</p>
+                    <p className="text-gray-600 mb-4">Create a unique event on the Ethereum blockchain and securely sell tickets as NFTs.</p>
                     <form
                         className="space-y-6"
                         onSubmit={(e) => handleCreateEvent(e, title, description, date, time, location, ticketPrice, address!, resetForm)}
