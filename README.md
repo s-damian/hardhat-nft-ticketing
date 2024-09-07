@@ -40,15 +40,15 @@ Note: I developed the same project with [Solana / Anchor](https://github.com/s-d
 
 ## Roadmap
 
-- [x] MetaMask integration.
-- [x] Homepage.
-- [x] Create event.
-- [ ] Event listing.
-- [ ] Buy a ticket.
-- [ ] Generate NFTs.
-- [ ] Verify NFTs.
-- [ ] Integrate other wallets.
-- [ ] Event organizer dashboard.
+- ✅ MetaMask integration.
+- ✅ Homepage.
+- ✅ Create event.
+- ⬜ Event listing.
+- ⬜ Buy a ticket.
+- ⬜ Generate NFTs.
+- ⬜ Verify NFTs.
+- ⬜ Integrate other wallets.
+- ⬜ Event organizer dashboard.
 
 
 
