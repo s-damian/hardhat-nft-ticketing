@@ -16,6 +16,10 @@ async function main() {
     await tx.wait();
 
     console.log(`Sent ${ethers.formatEther(amount)} ETH to ${recipient}`);
+
+    // Récupérer et afficher la balance du destinataire après l'envoi
+    const balance = await ethers.provider.getBalance(recipient);
+    console.log(`Balance of ${recipient} is now: ${ethers.formatEther(balance)} ETH`);
 }
 
 main().catch((error) => {

@@ -79,6 +79,12 @@ npx hardhat run scripts/getSolidityVersion.ts --network <network>
 npx hardhat run scripts/sendETH.ts --network <network>
 ```
 
+Example in Localhost :
+
+```bash
+npx hardhat run scripts/sendETH.ts --network localhost
+```
+
 ### Get Transaction Details
 
 In this script file, you need to replace "recipient" with the MetaMask address you want to reload.
