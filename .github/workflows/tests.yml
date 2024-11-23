@@ -16,7 +16,7 @@ jobs:
     strategy:
       matrix:
         # Node.js versions
-        node-version: [18, 20]
+        node-version: [18, 23]
         # Hardhat releases: https://github.com/NomicFoundation/hardhat/releases
         hardhat-version: [2.22] # Keep ONLY ONE version.
 

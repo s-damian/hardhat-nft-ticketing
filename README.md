@@ -67,7 +67,7 @@ See more images here:
 
 ## Prerequisites
 
-- **Node.js** `>= 18` (last tested: `20`) and **npm** (for the Front-End) - *You can install Node.js and npm here: [Node.js](https://nodejs.org/en/download/package-manager).*
+- **Node.js** `>= 18` (last tested: `23`) and **npm** (for the Front-End) - *You can install Node.js and npm here: [Node.js](https://nodejs.org/en/download/package-manager).*
 
 
 
