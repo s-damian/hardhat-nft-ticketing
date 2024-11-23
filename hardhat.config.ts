@@ -9,7 +9,7 @@ const MAINNET_RPC_URL = process.env.MAINNET_RPC_URL || "";
 const ETH_PRIVATE_KEY = process.env.ETH_PRIVATE_KEY || "";
 
 const config: HardhatUserConfig = {
-    solidity: "0.8.24",
+    solidity: "0.8.28",
     networks: {
         ...(ETH_PRIVATE_KEY && {
             sepolia: {

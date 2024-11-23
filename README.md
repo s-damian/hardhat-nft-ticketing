@@ -73,7 +73,7 @@ See more images here:
 
 ## Technologies
 
-- **Back-End**: Solidity `0.8.24`, Ethereum, Hardhat `2.22.x`
+- **Back-End**: Solidity `0.8.28`, Ethereum, Hardhat `2.22.x`
 - **Front-End**: Next.js `14`, React `18`, TypeScript `5`, Tailwind CSS
 - **Blockchain Interaction**: Ethers.js
 - **Wallet Integration**: MetaMask
