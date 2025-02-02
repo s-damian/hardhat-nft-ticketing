@@ -241,7 +241,7 @@ To switch from the **Localnet** to **Testnet**: [Localnet-to-Testnet.md](./docs/
 [Localnet-to-Testnet.md](./docs/Localnet-to-Testnet.md)
 
 - See further technical details here:
-[Notes-tech](./docs/Notes-tech.md)
+[Notes-tech.md](./docs/Notes-tech.md)
 
 
 

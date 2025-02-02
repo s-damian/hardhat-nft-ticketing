@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useAccount } from "wagmi";
-import { parseEther, formatEther } from "viem";
+import { formatEther } from "viem";
 import { handleCreateEvent } from "../../src/handlers/HandleCreateEvent";
 import Layout from "../../src/components/Layout";
 
