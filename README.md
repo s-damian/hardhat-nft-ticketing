@@ -146,7 +146,7 @@ npx hardhat compile
 Deploy contract(s) on local network:
 
 ```bash
-npx hardhat run scripts/deploy.ts --network localhost
+npx hardhat run ./scripts/deploy.ts --network localhost
 ```
 
 > In the terminal your EventManager Contract Address will be displayed.

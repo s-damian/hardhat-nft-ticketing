@@ -47,7 +47,7 @@ npx hardhat compile
 Deploy contract(s) on Sepolia testnet network:
 
 ```bash
-npx hardhat run scripts/deploy.ts --network sepolia
+npx hardhat run ./scripts/deploy.ts --network sepolia
 ```
 
 > In the terminal your EventManager Contract Address will be displayed.

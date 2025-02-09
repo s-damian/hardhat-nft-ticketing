@@ -1,7 +1,7 @@
 import { ethers } from "hardhat";
 
 // # Voir détails d'une transaction :
-// npx hardhat run scripts/getTxDetails.ts --network localhost
+// npx hardhat run ./scripts/getTxDetails.ts --network localhost
 async function main() {
     const txHash = "0x2dab3893e4792421260868d42d1645acc8d6bbdd8bc979d8082b63a1f57948fc"; // Mettre l'id de la transaction.
 

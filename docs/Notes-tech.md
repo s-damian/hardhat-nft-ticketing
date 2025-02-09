@@ -70,24 +70,24 @@ npx hardhat verify --network sepolia DEPLOYED_CONTRACT_ADDRESS
 ### Get Solidity Version
 
 ```bash
-npx hardhat run scripts/getSolidityVersion.ts --network <network>
+npx hardhat run ./scripts/getSolidityVersion.ts --network <network>
 ```
 
 ### Send Ethers
 
 ```bash
-npx hardhat run scripts/sendETH.ts --network <network>
+npx hardhat run ./scripts/sendETH.ts --network <network>
 ```
 
 Example in Localhost :
 
 ```bash
-npx hardhat run scripts/sendETH.ts --network localhost
+npx hardhat run ./scripts/sendETH.ts --network localhost
 ```
 
 ### Get Transaction Details
 
 In this script file, you need to replace "recipient" with the MetaMask address you want to reload.
 ```bash
-npx hardhat run scripts/getTxDetails.ts --network <network>
+npx hardhat run ./scripts/getTxDetails.ts --network <network>
 ```
