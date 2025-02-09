@@ -50,6 +50,8 @@ Deploy contract(s) on Sepolia testnet network:
 npm run deploy sepolia
 ```
 
+(`npm run deploy` calls the sh file `sh/deploy.sh`)
+
 > In the terminal your EventManager Contract Address will be displayed.
 
 ### Environment Variables - Contract Addresses

@@ -158,6 +158,8 @@ Deploy contract(s) on local network:
 npm run deploy localhost
 ```
 
+(`npm run deploy` calls the sh file `sh/deploy.sh`)
+
 > In the terminal your EventManager Contract Address will be displayed.
 
 
