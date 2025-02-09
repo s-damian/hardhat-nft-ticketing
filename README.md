@@ -135,6 +135,15 @@ npx hardhat node
 ```
 
 
+### Make Scripts Executable
+
+Ensure that the shell scripts are executable:
+
+```bash
+chmod +x sh/*.sh
+```
+
+
 ### Compile and Deploy
 
 Compile contract(s):
@@ -146,7 +155,7 @@ npx hardhat compile
 Deploy contract(s) on local network:
 
 ```bash
-npx hardhat run ./scripts/deploy.ts --network localhost
+npm run deploy localhost
 ```
 
 > In the terminal your EventManager Contract Address will be displayed.

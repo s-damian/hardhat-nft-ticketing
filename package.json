@@ -10,7 +10,8 @@
     "lint-sol:fix": "prettier --write --plugin=prettier-plugin-solidity 'contracts/**/*.sol'",
     "lint-solhint": "solhint 'contracts/**/*.sol'",
     "lint-solhint:fix": "solhint 'contracts/**/*.sol' --fix",
-    "lint-all": "npm run lint-sol:fix && npm run lint:fix"
+    "lint-all": "npm run lint-sol:fix && npm run lint:fix",
+    "deploy": "./sh/deploy.sh"
   },
   "keywords": [],
   "author": "",
@@ -18,7 +19,7 @@
   "description": "",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
-    "hardhat": "^2.22.18",
+    "hardhat": "^2.22.16",
     "prettier": "^3.3.2",
     "prettier-plugin-solidity": "^1.4.0",
     "solhint": "^5.0.3",
