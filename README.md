@@ -160,7 +160,7 @@ npm run deploy localhost
 
 (`npm run deploy` calls the sh file `sh/deploy.sh`)
 
-> In the terminal your EventManager Contract Address will be displayed.
+> In the terminal, the contract addresses will be displayed.
 
 
 ### Environment Variables - Contract Addresses
